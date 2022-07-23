@@ -3,7 +3,6 @@ import { Switch } from "react-router-dom";
 import RouteWithLayout from "./components/routeWithLayout/RouteWithLayout";
 import MainView from "./layout/main/MainView"; //With navbar and footer
 
-import Home from "./views/home/Home";
 import SignIn from "./views/SignIn/SignIn";
 import SignUp from "./views/SignUp/SignUp";
 

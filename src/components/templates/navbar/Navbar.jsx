@@ -54,10 +54,10 @@ const Navbar = () => {
 				/>
 			</Search>
 			<div className='right'>
-				<Link to='/' className='outline-red'>
+				<Link to='/sign-in' className='outline-red'>
 					Log In
 				</Link>
-				<Link to='/' className='fill-red'>
+				<Link to='/sign-up' className='fill-red'>
 					Sign up
 				</Link>
 			</div>

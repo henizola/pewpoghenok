@@ -4,7 +4,7 @@ const SignUpOne = () => {
 	return (
 		<Container>
 			<h4>Signup</h4>
-			<p>Already a user? Login</p>
+			<p className='sub-title'>Already a user? Login</p>
 			<InputContainer>
 				<p className='input-title'>Email *</p>
 				<input type='text' className='input' />

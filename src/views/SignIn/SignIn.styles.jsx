@@ -15,13 +15,17 @@ export const Container = styled.div`
 		font-weight: medium;
 	}
 	.forms {
-		margin-left: 40%;
+		margin-left: 50%;
+		transform: translateX(-50%);
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+
 		grid-gap: 25px;
 		width: fit-content;
 		height: 57vh;
 
 		margin-top: 30px;
+	}
+	h4 {
+		font-size: 23px;
 	}
 `;

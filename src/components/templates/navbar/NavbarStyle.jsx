@@ -5,11 +5,15 @@ export const Container = styled.div`
 	left: 0;
 	display: grid;
 	grid-template-columns: 150px 1fr 330px;
-	padding: 25px 100px;
+	padding: 25px 140px;
 	height: 100px;
 	width: 100vw;
 	background-color: #fff;
 	z-index: 999999999999999999999999999999999999999999999999;
+	background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 6px #00000029;
+	opacity: 1;
 	h1 {
 		color: black;
 	}

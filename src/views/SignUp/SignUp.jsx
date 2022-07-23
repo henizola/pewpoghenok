@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import SignUpOne from "../../components/SignUp1/SignUp1.component";
 
-import SignUpTwo from "../../components/SignUp2/SignUp2.component";
-
-import { Container, CustButton } from "./SignUp.styles";
+import { Container } from "./SignUp.styles";
 
 class SignUp extends Component {
 	render() {

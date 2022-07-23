@@ -2,13 +2,14 @@ import styled from "styled-components";
 export const Container = styled.div`
 	position: fixed;
 	top: 0;
-	right: 0;
+	left: 0;
 	display: grid;
 	grid-template-columns: 150px 1fr 330px;
 	padding: 25px 100px;
 	height: 100px;
 	width: 100vw;
-
+	background-color: #fff;
+	z-index: 999999999999999999999999999999999999999999999999;
 	h1 {
 		color: black;
 	}
@@ -37,5 +38,19 @@ export const Container = styled.div`
 		border-radius: 10px;
 		padding-top: 8px;
 		font-weight: bold;
+	}
+	@media screen and (max-width: 600px) {
+		height: fit-content;
+		max-height: 15vh;
+		padding: 10px;
+		grid-template-columns: 100px 1fr;
+		max-width: 100vw;
+
+		.right {
+			display: flex;
+			justify-content: space-between;
+			width: 95vw;
+			margin-top: 15px;
+		}
 	}
 `;

@@ -4,7 +4,9 @@ const SignInForm = () => {
 	return (
 		<Container>
 			<h4>Login</h4>
-			<p className='sub-title'>New user? Create an account</p>
+			<p className='sub-title'>
+				New user? <span className='red'>Create an account</span>{" "}
+			</p>
 			<InputContainer>
 				<p className='input-title'>Username</p>
 				<input type='text' className='input' />

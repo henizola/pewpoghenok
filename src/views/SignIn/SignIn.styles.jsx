@@ -28,4 +28,7 @@ export const Container = styled.div`
 	h4 {
 		font-size: 23px;
 	}
+	@media screen and (max-width: 600px) {
+		/* background-size:stretch; */
+	}
 `;

@@ -1,7 +1,7 @@
-import { styled, alpha } from "@mui/material/styles";
-import { BiSearchAlt2 } from "react-icons/bi";
 import { InputBase } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import React from "react";
+import { BiSearchAlt2 } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 import { Container } from "./NavbarStyle";

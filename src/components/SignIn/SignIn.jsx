@@ -7,6 +7,10 @@ export const Container = styled.div`
 	border-radius: 10px;
 	padding: 38px 50px;
 	text-align: center;
+
+	.red {
+		color: #d44244;
+	}
 	.input {
 		width: 100%;
 		border: none;
@@ -23,6 +27,9 @@ export const Container = styled.div`
 	}
 	.sub-title {
 		font-size: 16px;
+	}
+	@media screen and (max-width: 600px) {
+		max-width: 90vw;
 	}
 `;
 

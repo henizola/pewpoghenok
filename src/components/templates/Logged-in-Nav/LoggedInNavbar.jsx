@@ -1,12 +1,13 @@
 import { InputBase } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import React from "react";
+import React, { useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { BsFillPersonPlusFill } from "react-icons/bs";
+import { BsFillPersonPlusFill, BsFillGearFill } from "react-icons/bs";
 import { MdGroups } from "react-icons/md";
 import { Container } from "./LoggedInNavbar.styles.jsx";
 import { IoPersonCircleSharp } from "react-icons/io5";
+import { FaCoins } from "react-icons/fa";
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",
 	background: "#F0F0F0",
@@ -39,7 +40,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
-const LoggedInNav = () => {
+const LoggedInNav = (props) => {
+	const [open, setOpen] = useState(true);
+
 	return (
 		<Container>
 			<Link to='/'>
@@ -69,8 +72,27 @@ const LoggedInNav = () => {
 					<p>sniperkid123</p>
 					<p>2,000,123 pogs</p>
 				</div>
+				{open && (
+					<div className='menu'>
+						<button
+							onClick={() => {
+								setOpen(!open);
+							}}
+						>
+							<FaCoins style={{ marginRight: "10px" }} /> Buy pogs
+						</button>
+						<button
+							onClick={() => {
+								setOpen(!open);
+							}}
+						>
+							<BsFillGearFill style={{ marginRight: "10px" }} /> Account
+							settings
+						</button>
+					</div>
+				)}
 			</div>
-			<button className='person'>
+			<button className='person' onClick={() => setOpen(!open)}>
 				<IoPersonCircleSharp />
 			</button>
 		</Container>

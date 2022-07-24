@@ -23,6 +23,7 @@ export const Container = styled.div`
 		grid-template-columns: 143px 150px 1fr;
 		grid-gap: 22px;
 		margin-left: 47px;
+		position: relative;
 	}
 	.outline-red {
 		background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
@@ -75,6 +76,36 @@ export const Container = styled.div`
 			line-height: 20px;
 			margin: 0;
 			padding: 0;
+		}
+	}
+	.menu {
+		position: absolute;
+		top: 50px;
+		padding: 25px 20px;
+		right: -55px;
+		background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+		background: #ffffff 0% 0% no-repeat padding-box;
+		box-shadow: 0px 3px 10px #00000029;
+		border-radius: 10px;
+		width: 198px;
+		height: 119px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		button {
+			font: var(--unnamed-font-style-normal) normal
+				var(--unnamed-font-weight-bold) var(--unnamed-font-size-17) / 24px
+				var(--unnamed-font-family-source-sans-pro);
+			letter-spacing: var(--unnamed-character-spacing-0-02);
+			color: var(--unnamed-color-ba3c3d);
+			text-align: left;
+			font: normal normal bold 17px/24px Source Sans Pro;
+			letter-spacing: 0.02px;
+			color: #ba3c3d;
+			padding: 0;
+			margin: 0;
+			background-color: transparent;
+			border: none;
 		}
 	}
 	.person {

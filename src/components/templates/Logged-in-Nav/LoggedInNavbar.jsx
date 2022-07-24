@@ -2,12 +2,14 @@ import { InputBase } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React, { useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
-import { Link } from "react-router-dom";
-import { BsFillPersonPlusFill, BsFillGearFill } from "react-icons/bs";
-import { MdGroups } from "react-icons/md";
-import { Container } from "./LoggedInNavbar.styles.jsx";
-import { IoPersonCircleSharp } from "react-icons/io5";
+import { BsFillGearFill, BsFillPersonPlusFill } from "react-icons/bs";
 import { FaCoins } from "react-icons/fa";
+import { IoPersonCircleSharp } from "react-icons/io5";
+import { MdGroups } from "react-icons/md";
+import { Link } from "react-router-dom";
+import SoloModal from "../../SoloModal/SoloModal.component.jsx";
+import TeamModal from "../../TeamModal/TeamModal.component.jsx";
+import { Container } from "./LoggedInNavbar.styles.jsx";
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",
 	background: "#F0F0F0",
@@ -41,8 +43,21 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const LoggedInNav = (props) => {
-	const [open, setOpen] = useState(true);
-
+	const [open, setOpen] = useState(false);
+	const [solo, setSolo] = useState(false);
+	const [team, setTeam] = useState(false);
+	const openSolo = () => {
+		setSolo(true);
+		setTeam(false);
+	};
+	const openTeam = () => {
+		setTeam(true);
+		setSolo(false);
+	};
+	const onClose = () => {
+		setTeam(false);
+		setSolo(false);
+	};
 	return (
 		<Container>
 			<Link to='/'>
@@ -58,43 +73,47 @@ const LoggedInNav = (props) => {
 				/>
 			</Search>
 			<div className='right'>
-				<Link to='/sign-in' className='outline-red'>
-					Solo Match{" "}
+				<button className='outline-red' onClick={openSolo}>
+					Solo Match
 					<BsFillPersonPlusFill
 						style={{ fontSize: "23px", marginLeft: "7px" }}
 					/>
-				</Link>
-				<Link to='/sign-up' className='fill-red'>
+				</button>
+				<button className='fill-red' onClick={openTeam}>
 					Team Match{" "}
 					<MdGroups style={{ fontSize: "32px", marginLeft: "7px" }} />
-				</Link>
+				</button>
 				<div className='info'>
 					<p>sniperkid123</p>
 					<p>2,000,123 pogs</p>
 				</div>
 				{open && (
 					<div className='menu'>
-						<button
+						<Link
+							to='/currency-store'
 							onClick={() => {
 								setOpen(!open);
 							}}
 						>
 							<FaCoins style={{ marginRight: "10px" }} /> Buy pogs
-						</button>
-						<button
+						</Link>
+						<Link
+							to='/setting'
 							onClick={() => {
 								setOpen(!open);
 							}}
 						>
 							<BsFillGearFill style={{ marginRight: "10px" }} /> Account
 							settings
-						</button>
+						</Link>
 					</div>
 				)}
 			</div>
 			<button className='person' onClick={() => setOpen(!open)}>
 				<IoPersonCircleSharp />
 			</button>
+			<SoloModal open={solo} setOpen={openSolo} onClose={onClose} />
+			<TeamModal open={team} setOpen={openTeam} onClose={onClose} />
 		</Container>
 	);
 };

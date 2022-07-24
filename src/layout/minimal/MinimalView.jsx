@@ -8,6 +8,7 @@ const MinimalView = (props) => {
 	return (
 		<main>
 			<LoggedInNav />
+
 			<div className='main_body'>{children}</div>
 		</main>
 	);

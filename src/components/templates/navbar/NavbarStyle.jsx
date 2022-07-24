@@ -5,7 +5,8 @@ export const Container = styled.div`
 	left: 0;
 	display: grid;
 	grid-template-columns: 150px 1fr 330px;
-	padding: 25px 140px;
+	padding: 30px 140px;
+
 	height: 100px;
 	width: 100vw;
 	background-color: #fff;
@@ -20,9 +21,14 @@ export const Container = styled.div`
 	.right {
 		display: grid;
 		grid-template-columns: 140px 140px;
-		grid-gap: 50px;
+		grid-gap: 40px;
 	}
 	.outline-red {
+		background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+		border: 1px solid var(---d44244);
+		background: #ffffff 0% 0% no-repeat padding-box;
+		border: 1px solid #d44244;
+		border-radius: 15px;
 		width: 100%;
 		height: 40px;
 		border: 1px solid #d44244;
@@ -34,6 +40,9 @@ export const Container = styled.div`
 		border-radius: 10px;
 	}
 	.fill-red {
+		background: var(---d44244) 0% 0% no-repeat padding-box;
+		background: #d44244 0% 0% no-repeat padding-box;
+		border-radius: 15px;
 		width: 100%;
 		height: 40px;
 		background-color: #d44244;

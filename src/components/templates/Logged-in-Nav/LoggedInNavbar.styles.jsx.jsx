@@ -41,7 +41,7 @@ export const Container = styled.div`
 		letter-spacing: 0.02px;
 		color: #d44244;
 		text-align: center;
-		padding-top: 6px;
+		padding-top: 0px;
 		height: 40px;
 	}
 	.fill-red {
@@ -59,7 +59,7 @@ export const Container = styled.div`
 		font: normal normal bold 17px/24px Source Sans Pro;
 		letter-spacing: 0.02px;
 		color: #d44244;
-		padding-top: 4px;
+		padding-top: 0px;
 		height: 40px;
 	}
 	.info {
@@ -92,7 +92,7 @@ export const Container = styled.div`
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		button {
+		a {
 			font: var(--unnamed-font-style-normal) normal
 				var(--unnamed-font-weight-bold) var(--unnamed-font-size-17) / 24px
 				var(--unnamed-font-family-source-sans-pro);

@@ -7,6 +7,7 @@ import Settings from "./views/Settings/Settings.page";
 
 import SignIn from "./views/SignIn/SignIn";
 import SignUp from "./views/SignUp/SignUp";
+import Currency from "./views/Currency/Currency";
 
 const Routes = () => {
 	return (
@@ -28,6 +29,12 @@ const Routes = () => {
 				exact
 				path='/setting'
 				component={Settings}
+				layout={MainView}
+			/>
+			<RouteWithLayout
+				exact
+				path='/currency-store'
+				component={Currency}
 				layout={MainView}
 			/>
 		</Switch>

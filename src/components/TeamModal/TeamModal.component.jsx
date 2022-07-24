@@ -3,7 +3,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import ModalContainer from "../Modal/Modal.component";
 import { Button, Container, InputContainer } from "./TeamModal.styles";
 
-const TeamModal = ({ open, setOpen, onClose }) => {
+const TeamModal = ({ open, setOpen, onClose, onNext }) => {
 	const handleOpen = () => {
 		setOpen(true);
 	};
@@ -12,9 +12,9 @@ const TeamModal = ({ open, setOpen, onClose }) => {
 	return (
 		<ModalContainer open={open} handleOpen={handleOpen} handleClose={onClose}>
 			<Container>
-				<h4 className='title'>Ola</h4>
+				<h4 className='title'>Create Team Match</h4>
 				<p className='sub-title'>
-					Fill out the form to create a new solo match.
+					Fill out the form to create a new team match.
 				</p>
 				<InputContainer>
 					<p className='input-title'>Match name *</p>
@@ -57,8 +57,10 @@ const TeamModal = ({ open, setOpen, onClose }) => {
 						style={{ minHeight: "70px" }}
 					></textarea>
 				</InputContainer>
+				<p className='information'>Upload Match Banner</p>
 
-				<Button onClick={onClose}>Submit</Button>
+				<Button onClick={onNext}>Submit</Button>
+				<p style={{ marginTop: "10px" }}>Step 1 of 2</p>
 			</Container>
 		</ModalContainer>
 	);

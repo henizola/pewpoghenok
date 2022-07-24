@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 	width: 100%;
-	height: 100%;
-
+	height: 60vh;
 	text-align: center;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	.title {
 		font: var(--unnamed-font-style-normal) normal
 			var(--unnamed-font-weight-normal) var(--unnamed-font-size-23) /
@@ -37,6 +38,7 @@ export const Container = styled.div`
 		padding-left: 10px;
 		padding-right: 20px;
 		color: #0000008d;
+
 		&:focus {
 			outline: none;
 		}
@@ -94,6 +96,13 @@ export const InputContainer = styled.div`
 	height: fit-content;
 	margin-top: 15px;
 	text-align: left;
+	position: relative;
+	.icon {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 25px;
+	}
 `;
 
 export const Button = styled.div`

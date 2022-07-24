@@ -7,6 +7,7 @@ import { FaCoins } from "react-icons/fa";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { MdGroups } from "react-icons/md";
 import { Link } from "react-router-dom";
+import AddMembers from "../../AddMembers/AddMembers.component.jsx";
 import SoloModal from "../../SoloModal/SoloModal.component.jsx";
 import TeamModal from "../../TeamModal/TeamModal.component.jsx";
 import { Container } from "./LoggedInNavbar.styles.jsx";
@@ -46,17 +47,31 @@ const LoggedInNav = (props) => {
 	const [open, setOpen] = useState(false);
 	const [solo, setSolo] = useState(false);
 	const [team, setTeam] = useState(false);
+	const [addMembers, setAddMembers] = useState(false);
 	const openSolo = () => {
 		setSolo(true);
 		setTeam(false);
+		setAddMembers(false);
+	};
+	const openMembers = () => {
+		setSolo(false);
+		setTeam(false);
+		setAddMembers(true);
 	};
 	const openTeam = () => {
 		setTeam(true);
 		setSolo(false);
+		setAddMembers(false);
 	};
 	const onClose = () => {
 		setTeam(false);
 		setSolo(false);
+		setAddMembers(false);
+	};
+	const onNext = () => {
+		setTeam(false);
+		setSolo(false);
+		setAddMembers(true);
 	};
 	return (
 		<Container>
@@ -113,7 +128,13 @@ const LoggedInNav = (props) => {
 				<IoPersonCircleSharp />
 			</button>
 			<SoloModal open={solo} setOpen={openSolo} onClose={onClose} />
-			<TeamModal open={team} setOpen={openTeam} onClose={onClose} />
+			<TeamModal
+				open={team}
+				setOpen={openTeam}
+				onClose={onClose}
+				onNext={onNext}
+			/>
+			<AddMembers open={addMembers} setOpen={openMembers} onClose={onClose} />
 		</Container>
 	);
 };

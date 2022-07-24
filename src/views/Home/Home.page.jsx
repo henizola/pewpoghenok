@@ -2,8 +2,17 @@ import { Container, Matches, FilterButtonsContainer } from "./Home.styles";
 import React, { useState } from "react";
 import heroImage from "../../assets/home-hero.png";
 import Match from "../../components/Match/Match.component";
+import JoinMatch from "../../components/JoinMatch/JoinMatch.component";
 const Home = () => {
 	const [selected, setSelected] = useState("public");
+	const [open, setOpen] = useState(false);
+
+	const handleOpen = () => {
+		setOpen(true);
+	};
+	const handleClose = () => {
+		setOpen(false);
+	};
 	return (
 		<Container>
 			<div id='scroll-container'>
@@ -33,11 +42,12 @@ const Home = () => {
 					</FilterButtonsContainer>
 				</div>
 				<div className='match-list'>
-					<Match />
-					<Match />
-					<Match />
+					<Match handleOpen={handleOpen} />
+					<Match handleOpen={handleOpen} />
+					<Match handleOpen={handleOpen} />
 				</div>
 			</Matches>
+			<JoinMatch open={open} onClose={handleClose} />
 		</Container>
 	);
 };

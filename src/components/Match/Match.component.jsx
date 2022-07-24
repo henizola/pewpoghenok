@@ -1,7 +1,7 @@
 import { Container } from "./Match.styles";
 import React from "react";
 import avatar from "../../assets/person.png";
-const Match = () => {
+const Match = ({ handleOpen }) => {
 	return (
 		<Container>
 			<div className='space'>
@@ -21,7 +21,9 @@ const Match = () => {
 					<img src={avatar} alt='' className='avatar' />
 					<p>Username</p>
 				</div>
-				<button className='red'>Join</button>
+				<button className='red' onClick={handleOpen}>
+					Join
+				</button>
 			</div>
 		</Container>
 	);

@@ -9,7 +9,7 @@ const style = {
 	transform: "translate(-50%, -50%)",
 	width: "425px",
 	outline: "none",
-	padding: "39px 49px",
+	padding: "15px 49px",
 	background: "#FFFFFF 0% 0% no-repeat padding-box",
 	boxShadow: " 0px 3px 10px #0000001F",
 	borderRadius: "15px",

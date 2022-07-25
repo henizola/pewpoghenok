@@ -4,16 +4,13 @@ import "jquery/dist/jquery";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
-import { ModalProvider } from "./context/modalContext";
 import Routes from "./Routes";
 
 function App() {
 	return (
 		<Router>
 			<div className='App'>
-				<ModalProvider>
-					<Routes />
-				</ModalProvider>
+				<Routes />
 			</div>
 		</Router>
 	);

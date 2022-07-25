@@ -41,6 +41,7 @@ export const Container = styled.div`
 			outline: none;
 		}
 	}
+	
 	.select:after {
 		color: red !important;
 	}
@@ -74,6 +75,25 @@ export const Container = styled.div`
 	}
 	p {
 		font-size: 14px;
+	}
+	.short-field-container{
+		 
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		
+	}
+	.short-field-container input{
+		background-color: #FFFFFF;
+		border: 1px solid #707070;
+
+	}
+	.short-field-container span {
+		margin auto 10px;
+	}
+	.wallet{
+		text-align:left;
+		margin:30px auto;
 	}
 `;
 

@@ -9,7 +9,7 @@ import MinimalView from "./layout/minimal/MinimalView";
 import Currency from "./views/Currency/Currency";
 import SignIn from "./views/SignIn/SignIn";
 import SignUp from "./views/SignUp/SignUp";
-
+import MatchPage from "./views/match-page.jsx/match";
 const Routes = () => {
 	return (
 		<Switch>
@@ -36,6 +36,12 @@ const Routes = () => {
 				exact
 				path='/currency-store'
 				component={Currency}
+				layout={MinimalView}
+			/>
+			<RouteWithLayout
+				exact
+				path='/match-page'
+				component={MatchPage}
 				layout={MinimalView}
 			/>
 		</Switch>

@@ -15,6 +15,9 @@ export const Container = styled.div`
 	box-shadow: 0px 3px 6px #00000029;
 	opacity: 1;
 
+	.mobile {
+		display: none;
+	}
 	h1 {
 		color: black;
 	}
@@ -121,15 +124,24 @@ export const Container = styled.div`
 	@media screen and (max-width: 600px) {
 		height: fit-content;
 		max-height: 15vh;
+
 		padding: 10px;
 		grid-template-columns: 100px 1fr;
 		max-width: 100vw;
-
+		display: none !important;
 		.right {
 			display: flex;
 			justify-content: space-between;
 			width: 95vw;
 			margin-top: 15px;
+		}
+		.desktop {
+			display: none;
+		}
+		.mobile {
+			display: grid;
+			grid-template-columns: 100px 1fr 100px;
+			padding: 0;
 		}
 	}
 `;

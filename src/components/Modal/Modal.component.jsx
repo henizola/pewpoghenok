@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import { red } from "@mui/material/colors";
 import Modal from "@mui/material/Modal";
 import * as React from "react";
 
@@ -24,7 +25,7 @@ export default function ModalContainer({ children, open, handleClose }) {
 				aria-labelledby='modal-modal-title'
 				aria-describedby='modal-modal-description'
 			>
-				<Box sx={style}>
+				<Box sx={style} className='cust-modal'>
 					{React.Children.map(children, (child, index) => {
 						return <div key={index}>{child}</div>;
 					})}

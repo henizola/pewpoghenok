@@ -84,6 +84,53 @@ export const Container = styled.div`
 		object-fit: cover;
 		width: 100%;
 	}
+	@media screen and (max-width: 600px) {
+		padding: 30px;
+
+		.match-head {
+			display: flex;
+			flex-direction: column;
+		}
+		.header,
+		.red {
+			font-size: 7vw;
+		}
+		#scroll-text {
+			width: 300vw !important;
+		}
+	}
+
+	@-moz-keyframes my-animation {
+		from {
+			-moz-transform: translateX(0%);
+		}
+		to {
+			-moz-transform: translateX(-100%);
+		}
+	}
+
+	/* for Chrome */
+	@-webkit-keyframes my-animation {
+		from {
+			-webkit-transform: translateX(0%);
+		}
+		to {
+			-webkit-transform: translateX(-100%);
+		}
+	}
+
+	@keyframes my-animation {
+		from {
+			-moz-transform: translateX(0%);
+			-webkit-transform: translateX(0%);
+			transform: translateX(100%);
+		}
+		to {
+			-moz-transform: translateX(-100%);
+			-webkit-transform: translateX(-100%);
+			transform: translateX(-100%);
+		}
+	}
 `;
 
 export const Matches = styled.div`
@@ -118,6 +165,12 @@ export const Matches = styled.div`
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 17px;
 		margin-top: 30px;
+	}
+	@media screen and (max-width: 600px) {
+		.match-list {
+			grid-template-columns: 1fr;
+			max-width: 90vw;
+		}
 	}
 `;
 

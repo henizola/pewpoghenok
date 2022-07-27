@@ -54,4 +54,7 @@ export const Container = styled.div`
 		text-decoration: none;
 		float: right;
 	}
+	@media screen and (max-width: 600px) {
+		width: 87vw;
+	}
 `;

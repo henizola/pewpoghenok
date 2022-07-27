@@ -26,7 +26,11 @@ export const Container = styled.div`
 		.pages {
 			display: grid;
 			grid-template-columns: 1fr;
+			padding-top: 0px;
+			gap: 30px;
 		}
 		margin: 3rem;
+		padding-top: 100px;
+		padding-bottom: 0px;
 	}
 `;

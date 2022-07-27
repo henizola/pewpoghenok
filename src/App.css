@@ -77,3 +77,11 @@ body {
 .st_btn_secondary:focus, .st_btn_primary:active, .st_btn_primary:hover {
   text-decoration: underline;
 }
+
+
+@media screen and (max-width:600px){
+  .cust-modal{
+    width:90vw!important;
+top:100%;
+  }
+}

@@ -84,6 +84,9 @@ export const Container = styled.div`
 		object-fit: cover;
 		width: 100%;
 	}
+	@media screen and (max-width: 600px) {
+		padding: 30px;
+	}
 `;
 
 export const Matches = styled.div`

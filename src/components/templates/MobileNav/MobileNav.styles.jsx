@@ -132,7 +132,10 @@ export const Container = styled.div`
 		grid-template-columns: 100px 1fr 70px;
 		max-width: 100vw;
 		max-height: 20vh;
-
+		.outline-red,
+		.fill-red {
+			font-size: 11px !important;
+		}
 		.desktop {
 			display: none;
 		}

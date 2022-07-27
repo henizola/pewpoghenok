@@ -80,6 +80,9 @@ body {
 
 
 @media screen and (max-width:600px){
+  .desktop{
+    display:none!important;
+  }
   .cust-modal{
     width:90vw!important;
 top:100%;

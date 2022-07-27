@@ -74,9 +74,7 @@ const MobileNav = (props) => {
 		setAddMembers(true);
 	};
 	return (
-		<Container
-			style={{ display: !solo && !team && !addMembers ? "grid" : "none" }}
-		>
+		<Container style={{ display: (solo || team || addMembers) && "none" }}>
 			<SoloModal open={solo} setOpen={openSolo} onClose={onClose} />
 			<TeamModal
 				open={team}

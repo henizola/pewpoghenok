@@ -9,7 +9,7 @@ import { MdGroups } from "react-icons/md";
 import { Link } from "react-router-dom";
 import AddMembers from "../../AddMembers/AddMembers.component.jsx";
 import SoloModal from "../../SoloModal/SoloModal.component.jsx";
-import TeamModal from "../../TeamModal/TeamModal.component.jsx";
+import TeamModal from "../../TeamModal/TeamModalOne.component.jsx";
 import { Container } from "./MobileNav.styles.jsx";
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",

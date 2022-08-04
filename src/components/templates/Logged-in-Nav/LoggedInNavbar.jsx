@@ -8,7 +8,7 @@ import { MdGroups } from "react-icons/md";
 import { Link } from "react-router-dom";
 import AddMembers from "../../AddMembers/AddMembers.component.jsx";
 import SoloModal from "../../SoloModal/SoloModal.component.jsx";
-import TeamModal from "../../TeamModal/TeamModal.component.jsx";
+import TeamModalOne from "../../../components/TeamModal/TeamModalOne.component";
 import { Container } from "./LoggedInNavbar.styles.jsx";
 
 import avatar from "../../../assets/avatar1.png";
@@ -129,7 +129,7 @@ const LoggedInNav = (props) => {
 				<img src={avatar} alt='avatar' />
 			</button>
 			<SoloModal open={solo} setOpen={openSolo} onClose={onClose} />
-			<TeamModal
+			<TeamModalOne
 				open={team}
 				setOpen={openTeam}
 				onClose={onClose}

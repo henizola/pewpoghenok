@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: 173px 100px;
-	gap: 80px;
+	width: 100%;
+	margin-top: 50px;
+	padding: 80px 140px;
 	.title {
 		font: var(--unnamed-font-style-normal) normal
 			var(--unnamed-font-weight-bold) var(--unnamed-font-size-30) /
@@ -18,8 +19,9 @@ export const Container = styled.div`
 	}
 	.pages {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: repeat(6, 180px);
 		grid-gap: 16px;
+		margin-top: 71px;
 	}
 
 	@media (max-width: 768px) {

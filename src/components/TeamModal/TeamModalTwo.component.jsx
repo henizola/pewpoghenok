@@ -3,7 +3,7 @@ import Modal from "@mui/material/Modal";
 import React, { useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import ModalContainer from "../Modal/Modal.component";
-import { Button, Container, InputContainer, Warning } from "./SoloModal.styles";
+import { Button, Container, InputContainer } from "./TeamModal.styles";
 
 const style = {
 	position: "absolute",
@@ -18,7 +18,7 @@ const style = {
 	borderRadius: "15px",
 };
 
-const SoloModal = ({ open, setOpen, onClose }) => {
+const TeamModal1 = ({ open, setOpen, onClose }) => {
 	const handleOpen = () => {
 		setOpen(true);
 	};
@@ -65,7 +65,7 @@ const SoloModal = ({ open, setOpen, onClose }) => {
 				<Box sx={style}>
 					<ModalContainer open={open} handleOpen={handleOpen}>
 						<Container>
-							<h4 className='title'>Create Solo Match</h4>
+							<h4 className='title'>Create Team Match</h4>
 							<button className='close' onClick={onClose}>
 								X
 							</button>
@@ -164,7 +164,7 @@ const SoloModal = ({ open, setOpen, onClose }) => {
 								/>
 								<p className='warning'>This field is required</p>
 							</InputContainer>
-							<Button onClick={handleSubmit}>Submit</Button>
+							<Button onClick={handleSubmit}>NEXT</Button>
 						</Container>
 					</ModalContainer>
 				</Box>
@@ -173,4 +173,4 @@ const SoloModal = ({ open, setOpen, onClose }) => {
 	);
 };
 
-export default SoloModal;
+export default TeamModal1;

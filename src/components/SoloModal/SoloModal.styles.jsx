@@ -40,6 +40,12 @@ export const Container = styled.div`
 	.info {
 		position: relative;
 	}
+	.colu {
+		min-height: 60vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 	.menu {
 		position: absolute;
 		top: 0;

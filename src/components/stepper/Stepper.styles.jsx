@@ -6,28 +6,24 @@ export const Contanier = styled.div`
 	height: fit-content;
 	display: grid;
 	grid-template-columns: 321px 1fr;
-	grid-gap: 78px;
+	grid-gap: 74px;
 	margin: 0px auto;
 	margin-right: 50px;
-
+	padding: 0 !important;
 	.header {
 		height: 100%;
 		position: fixed;
 		top: 75px;
+		padding-top: 80px;
 		border: none;
-		border-right: 1px solid #707070;
-		padding-right: 50px;
-		padding-top: 100px;
+		margin-top: -19px;
+		border-right: 1px solid #d4d4d8;
+		padding-right: 100px;
+
 		h1 {
-			font: var(--unnamed-font-style-normal) normal
-				var(--unnamed-font-weight-bold) var(--unnamed-font-size-30) /
-				var(--unnamed-line-spacing-46) var(--unnamed-font-family-poppins);
-			letter-spacing: var(--unnamed-character-spacing-0);
-			color: var(--unnamed-color-4a4a4a);
 			text-align: left;
-			font: normal normal bold 30px/46px Poppins;
-			letter-spacing: 0px;
-			color: #4a4a4a;
+			font: normal normal bold 24px/51px Poppins;
+			color: #3f3f46;
 		}
 	}
 
@@ -39,55 +35,40 @@ export const Contanier = styled.div`
 		margin-top: 50px;
 	}
 	.tab {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) var(--unnamed-font-size-23) /
-			var(--unnamed-line-spacing-34) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0);
-		color: var(--unnamed-color-000000);
 		text-align: left;
-		font: normal normal normal 23px/34px Poppins;
+		font: normal normal normal 21px/32px Poppins;
 		letter-spacing: 0px;
-		color: #000000;
+		color: #0a0a0a;
 		background-color: transparent;
 		border: none;
 		margin-bottom: 33px;
 	}
 	.active {
-		color: #2865b3;
-		text-decoration: underline;
+		text-align: left;
+		font: normal normal bold 21px/31px Poppins;
+		letter-spacing: 0px;
+		color: #4e80ee;
 	}
 	.content {
-		padding-top: 60px;
+		padding-top: 80px;
 	}
 
 	.content h1 {
-		margin-bottom: 60px;
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) var(--unnamed-font-size-30) /
-			var(--unnamed-line-spacing-46) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0-01);
-		color: var(--unnamed-color-000000);
+		margin-bottom: 24px;
 		text-align: left;
 		font: normal normal normal 30px/46px Poppins;
 		letter-spacing: 0.01px;
 		color: #000000;
-		opacity: 1;
 	}
 	.content .profile-container {
 		margin-bottom: 34px;
 	}
-	.content .edit-link {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-17) / 24px
-			var(--unnamed-font-family-source-sans-pro);
-		letter-spacing: var(--unnamed-character-spacing-0-02);
-		color: var(---d44244);
+	.edit__link {
 		text-align: left;
-		text-decoration: underline;
-		font: normal normal bold 17px/24px Source Sans Pro;
-		letter-spacing: 0.02px;
-		color: #d44244;
-		opacity: 1;
+		font: normal normal bold 16px/24px Poppins;
+		letter-spacing: 0px;
+		color: #4e80ee;
+		width: 100%;
 	}
 	.content .general-icon {
 		text-align: center;
@@ -156,23 +137,20 @@ export const Contanier = styled.div`
 		margin-top: 30px;
 	}
 	button.red {
-		background: var(---d44244) 0% 0% no-repeat padding-box;
-		background: #d44244 0% 0% no-repeat padding-box;
-		border-radius: 15px;
+		width: 104px;
+		height: 31px;
 		border: none;
-		padding: 0 !important;
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-17) / 24px
-			var(--unnamed-font-family-source-sans-pro);
-		letter-spacing: var(--unnamed-character-spacing-0-02);
-		color: var(--unnamed-color-ffffff);
-		text-align: left;
-		font: normal normal bold 17px/24px Source Sans Pro;
-		letter-spacing: 0.02px;
-		color: #ffffff;
-		width: 140px;
+		background: var(--unnamed-color-ef4444) 0% 0% no-repeat padding-box;
+		background: #ef4444 0% 0% no-repeat padding-box;
+		border-radius: 8px;
+
 		text-align: center;
 		text-decoration: none;
+		float: right;
+
+		font: normal normal bold 14px/21px Poppins;
+		letter-spacing: 0.02px;
+		color: #ffffff;
 	}
 	button.cash {
 		margin-top: 66px;

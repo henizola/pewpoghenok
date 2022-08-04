@@ -5,7 +5,7 @@ const Stepper = ({ currentStep, children, setStep }) => {
 	const steps = [
 		"General ",
 		"Match history",
-		"Upcoming Matches",
+		// "Upcoming Matches",
 		"Payment information",
 
 		"Gaming accounts",

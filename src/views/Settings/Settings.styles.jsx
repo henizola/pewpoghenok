@@ -3,26 +3,15 @@ import styled from "styled-components";
 export const Container = styled.div`
 	width: 100vw;
 	height: calc(100vh -100px);
-	padding: 20px 140px;
+	padding: 0px 140px;
 	margin: 0;
-	padding-bottom: 100px;
 	.header {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) 40px/60px
-			var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0);
-		color: var(--unnamed-color-a2a2a2);
 		text-align: left;
 		font: normal normal normal 40px/60px Poppins;
 		letter-spacing: 0px;
 		color: #a2a2a2;
 	}
 	.red {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) 40px/60px
-			var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0);
-		color: var(---d44244);
 		text-align: left;
 		text-decoration: underline;
 		font: normal normal bold 40px/60px Poppins;
@@ -31,54 +20,6 @@ export const Container = styled.div`
 		margin-right: 20px;
 	}
 
-	#scroll-container {
-		overflow: hidden;
-	}
-
-	#scroll-text {
-		/* animation properties */
-		-moz-transform: translateX(100%);
-		-webkit-transform: translateX(100%);
-		transform: translateX(100%);
-		width: fit-content !important;
-		-moz-animation: my-animation 10s linear infinite;
-		-webkit-animation: my-animation 10s linear infinite;
-		animation: my-animation 10s linear infinite;
-		width: 100vw !important;
-	}
-
-	/* for Firefox */
-	@-moz-keyframes my-animation {
-		from {
-			-moz-transform: translateX(100%);
-		}
-		to {
-			-moz-transform: translateX(-100%);
-		}
-	}
-
-	/* for Chrome */
-	@-webkit-keyframes my-animation {
-		from {
-			-webkit-transform: translateX(100%);
-		}
-		to {
-			-webkit-transform: translateX(-100%);
-		}
-	}
-
-	@keyframes my-animation {
-		from {
-			-moz-transform: translateX(100%);
-			-webkit-transform: translateX(100%);
-			transform: translateX(100%);
-		}
-		to {
-			-moz-transform: translateX(-100%);
-			-webkit-transform: translateX(-100%);
-			transform: translateX(-100%);
-		}
-	}
 	.hero {
 		height: 450px;
 		object-fit: cover;

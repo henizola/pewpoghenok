@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
 	width: 100vw;
 	height: calc(100vh -100px);
-
 	margin: 0;
+	padding-bottom: 100px;
 	.header {
 		font: var(--unnamed-font-style-normal) normal
 			var(--unnamed-font-weight-bold) var(--unnamed-font-size-28) /
@@ -50,11 +50,6 @@ export const Matches = styled.div`
 	}
 	.filter {
 		margin: 13px 20px;
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
-			var(--unnamed-line-spacing-22) var(--unnamed-font-family-source-sans-pro);
-		letter-spacing: var(--unnamed-character-spacing-0-01);
-		color: var(--unnamed-color-000000);
 		font: normal normal normal 16px/22px Source Sans Pro;
 	}
 
@@ -72,39 +67,15 @@ export const Matches = styled.div`
 	}
 `;
 
-export const FilterButtonsContainer = styled.div`
-	width: 200px;
-	font-display: grid;
-	grid-template-columns: 1fr 1fr;
-
-	height: 50px;
-	/* UI Properties */
-	background: var(--unnamed-color-f0f0f0) 0% 0% no-repeat padding-box;
-	background: #f0f0f0 0% 0% no-repeat padding-box;
-	border-radius: 10px;
-	padding: 10px;
-	display: flex;
-	justify-content: space-between;
-	button {
-		border: none;
-		color: black;
-		width: 78px;
-		height: 100%;
-		/* UI Properties */
-		background-color: transparent;
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-17) / 24px
-			var(--unnamed-font-family-source-sans-pro);
-		letter-spacing: var(--unnamed-character-spacing-0-02);
-		color: var(--unnamed-color-ffffff);
-		text-align: center;
-		font: normal normal bold 17px/24px Source Sans Pro;
-		letter-spacing: 0.02px;
-		border-radius: 10px;
-	}
-	.selected {
-		background: var(--unnamed-color-2865b3) 0% 0% no-repeat padding-box;
-		background: #2865b3 0% 0% no-repeat padding-box;
-		color: #fff;
-	}
+export const GameLink = styled.button`
+	border: none;
+	background-color: transparent;
+	text-align: left;
+	font: ${(props) =>
+		props.active
+			? "normal normal bold 28px/42px Poppins"
+			: "normal normal 300 28px/42px Poppins"};
+	letter-spacing: 0px;
+	color: ${(props) => (props.active ? "#ef4444" : "#D4D4D8")};
+	opacity: ${(props) => (props.active ? "1" : "0.8")};
 `;

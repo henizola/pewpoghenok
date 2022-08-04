@@ -2,17 +2,25 @@ import styled from "styled-components";
 import background from "../../assets/background.png";
 export const Container = styled.div`
 	width: 100vw;
-	min-height: calc(100vh - 100px);
+	min-height: calc(100vh - 58px);
 	background-image: url(${background});
-	background-size: 100vw calc(100vh - 100px);
-	padding: 30px 0;
+	background-size: 100vw calc(100vh - 58px);
+	padding: 0;
+	padding-top: 50px;
+	padding-bottom: 0;
 
 	.title {
 		width: 100%;
 		text-align: center;
-		color: #fff;
-		font-size: 4vw;
-		font-weight: medium;
+		font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+			var(--unnamed-font-size-58) / var(--unnamed-line-spacing-87)
+			var(--unnamed-font-family-poppins);
+		letter-spacing: var(--unnamed-character-spacing--0-03);
+		color: var(--unnamed-color-ffffff);
+		text-align: center;
+		font: normal normal 600 58px/87px Poppins;
+		letter-spacing: -0.03px;
+		color: #ffffff;
 	}
 	.forms {
 		margin-left: 50%;
@@ -22,8 +30,6 @@ export const Container = styled.div`
 		grid-gap: 25px;
 		width: fit-content;
 		height: 57vh;
-
-		margin-top: 30px;
 	}
 	h4 {
 		font-size: 23px;

@@ -1,11 +1,15 @@
 import { Container, InputContainer, Button } from "./SignUp1";
 import React from "react";
-const SignUpOne = () => {
+import { Link } from "react-router-dom";
+const SignUpOne = ({ setStep }) => {
 	return (
 		<Container>
 			<h4>Signup</h4>
 			<p className='sub-title'>
-				Already a user? <span className='red'>Login</span>{" "}
+				Already a user ?{" "}
+				<Link to='sign-in' className='red'>
+					Login
+				</Link>
 			</p>
 			<InputContainer>
 				<p className='input-title'>Email *</p>
@@ -23,8 +27,10 @@ const SignUpOne = () => {
 				<p className='input-title'>Confirm Password *</p>
 				<input type='text' className='input' />
 			</InputContainer>
+			<Button style={{ marginTop: "31px" }} onClick={() => setStep(1)}>
+				Next
+			</Button>
 			<p style={{ marginTop: "20px" }}>Step 1 of 2</p>
-			<Button>Sign up</Button>
 		</Container>
 	);
 };

@@ -84,7 +84,7 @@ const MobileNav = (props) => {
 			/>
 			<AddMembers open={addMembers} setOpen={openMembers} onClose={onClose} />
 			<Link to='/'>
-				<h1>Logo</h1>
+				<h1 className='logo'>PEWPOG</h1>
 			</Link>
 			<Search>
 				<SearchIconWrapper>

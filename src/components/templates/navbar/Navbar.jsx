@@ -9,10 +9,10 @@ import { Container } from "./NavbarStyle";
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",
 	background: "#F0F0F0",
-	borderRadius: "10px",
-	height: "40px",
-	maxWidth: "400px!important",
-	padding: "10px",
+	borderRadius: "8px",
+	height: "31px",
+	maxWidth: "376px!important",
+	padding: "5px",
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
@@ -22,7 +22,8 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-	right: "20px",
+	right: "10px",
+	top: "5px",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -42,7 +43,7 @@ const Navbar = () => {
 	return (
 		<Container>
 			<Link to='/'>
-				<h1>Logo</h1>
+				<h1>PEWPOG</h1>
 			</Link>
 			<Search>
 				<SearchIconWrapper>

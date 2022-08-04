@@ -4,20 +4,22 @@ import React, { useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { BsFillGearFill, BsFillPersonPlusFill } from "react-icons/bs";
 import { FaCoins } from "react-icons/fa";
-import { IoPersonCircleSharp } from "react-icons/io5";
 import { MdGroups } from "react-icons/md";
 import { Link } from "react-router-dom";
 import AddMembers from "../../AddMembers/AddMembers.component.jsx";
 import SoloModal from "../../SoloModal/SoloModal.component.jsx";
 import TeamModal from "../../TeamModal/TeamModal.component.jsx";
 import { Container } from "./LoggedInNavbar.styles.jsx";
+
+import avatar from "../../../assets/avatar1.png";
+
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",
 	background: "#F0F0F0",
-	borderRadius: "10px",
-	height: "40px",
-	maxWidth: "393px!important",
-	padding: "10px",
+	borderRadius: "8px",
+	height: "31px",
+	maxWidth: "376px!important",
+	padding: "5px",
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
@@ -76,7 +78,7 @@ const LoggedInNav = (props) => {
 	return (
 		<Container>
 			<Link to='/'>
-				<h1>Logo</h1>
+				<h1>PEWPOG</h1>
 			</Link>
 			<Search>
 				<SearchIconWrapper>
@@ -88,20 +90,19 @@ const LoggedInNav = (props) => {
 				/>
 			</Search>
 			<div className='right'>
-				<button className='outline-red' onClick={openSolo}>
+				<button className='red-link' onClick={openSolo}>
 					Solo Match
 					<BsFillPersonPlusFill
 						style={{ fontSize: "23px", marginLeft: "7px" }}
 					/>
 				</button>
-				<button className='fill-red' onClick={openTeam}>
+				<button className='red-link' onClick={openTeam}>
 					Team Match{" "}
 					<MdGroups style={{ fontSize: "32px", marginLeft: "7px" }} />
 				</button>
-				<div className='info'>
-					<p>sniperkid123</p>
-					<p>2,000,123 pogs</p>
-				</div>
+				<p className='info'>
+					<p>2,123 pogs</p>
+				</p>
 				{open && (
 					<div className='menu'>
 						<Link
@@ -125,7 +126,7 @@ const LoggedInNav = (props) => {
 				)}
 			</div>
 			<button className='person' onClick={() => setOpen(!open)}>
-				<IoPersonCircleSharp />
+				<img src={avatar} alt='avatar' />
 			</button>
 			<SoloModal open={solo} setOpen={openSolo} onClose={onClose} />
 			<TeamModal

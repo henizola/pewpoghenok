@@ -5,8 +5,9 @@ export const Container = styled.div`
 	left: 0;
 	display: grid;
 	grid-template-columns: 150px 50vw 1fr;
-	padding: 30px 140px;
+	padding: 0px 140px;
 	height: fit-content !important;
+	border: 2px solid red;
 	width: 100vw;
 	background-color: #fff;
 	z-index: 999999999999999999999999999999999999999999999999;
@@ -19,7 +20,15 @@ export const Container = styled.div`
 		display: none;
 	}
 	h1 {
-		color: black;
+		font: var(--unnamed-font-style-normal) normal
+			var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) /
+			var(--unnamed-line-spacing-27) var(--unnamed-font-family-poppins);
+		letter-spacing: var(--unnamed-character-spacing-0);
+		color: var(--unnamed-color-3f3f46);
+		text-align: left;
+		font: normal normal normal 18px/27px Poppins;
+		letter-spacing: 0px;
+		color: #3f3f46;
 	}
 	.right {
 		width: 85vw;

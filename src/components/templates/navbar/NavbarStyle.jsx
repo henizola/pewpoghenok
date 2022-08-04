@@ -5,9 +5,8 @@ export const Container = styled.div`
 	left: 0;
 	display: grid;
 	grid-template-columns: 150px 1fr 330px;
-	padding: 30px 140px;
-
-	height: 100px;
+	padding: 12px 140px;
+	height: 56px;
 	width: 100vw;
 	background-color: #fff;
 	z-index: 999999999999999999999999999999999999999999999999;
@@ -16,11 +15,19 @@ export const Container = styled.div`
 	box-shadow: 0px 3px 6px #00000029;
 	opacity: 1;
 	h1 {
-		color: black;
+		font: var(--unnamed-font-style-normal) normal
+			var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) /
+			var(--unnamed-line-spacing-27) var(--unnamed-font-family-poppins);
+		letter-spacing: var(--unnamed-character-spacing-0);
+		color: var(--unnamed-color-3f3f46);
+		text-align: left;
+		font: normal normal normal 18px/27px Poppins;
+		letter-spacing: 0px;
+		color: #3f3f46;
 	}
 	.right {
 		display: grid;
-		grid-template-columns: 140px 140px;
+		grid-template-columns: 80px 80px;
 		grid-gap: 40px;
 	}
 	.outline-red {
@@ -30,27 +37,37 @@ export const Container = styled.div`
 		border: 1px solid #d44244;
 		border-radius: 15px;
 		width: 100%;
-		height: 40px;
+		height: 31px;
 		border: 1px solid #d44244;
 		text-align: center;
 		padding-top: 6px;
 		color: #d44244;
-		font-size: 17px;
-		font-weight: bold;
-		border-radius: 10px;
+		border-radius: 8px;
+		padding-top: 4px;
+		font: var(--unnamed-font-style-normal) normal
+			var(--unnamed-font-weight-bold) var(--unnamed-font-size-14) /
+			var(--unnamed-line-spacing-21) var(--unnamed-font-family-poppins);
+		letter-spacing: var(--unnamed-character-spacing-0-02);
+		font: normal normal bold 14px/21px Poppins;
+		letter-spacing: 0.02px;
 	}
 	.fill-red {
 		background: var(---d44244) 0% 0% no-repeat padding-box;
 		background: #d44244 0% 0% no-repeat padding-box;
 		border-radius: 15px;
 		width: 100%;
-		height: 40px;
+		height: 31px;
 		background-color: #d44244;
 		text-align: center;
 		color: #fff;
-		border-radius: 10px;
-		padding-top: 8px;
-		font-weight: bold;
+		border-radius: 8px;
+		padding-top: 4px;
+		font: var(--unnamed-font-style-normal) normal
+			var(--unnamed-font-weight-bold) var(--unnamed-font-size-14) /
+			var(--unnamed-line-spacing-21) var(--unnamed-font-family-poppins);
+		letter-spacing: var(--unnamed-character-spacing-0-02);
+		font: normal normal bold 14px/21px Poppins;
+		letter-spacing: 0.02px;
 	}
 	@media screen and (max-width: 600px) {
 		height: fit-content;

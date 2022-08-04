@@ -40,7 +40,7 @@ const Routes = () => {
 			/>
 			<RouteWithLayout
 				exact
-				path='/match-page'
+				path='/match'
 				component={MatchPage}
 				layout={MinimalView}
 			/>

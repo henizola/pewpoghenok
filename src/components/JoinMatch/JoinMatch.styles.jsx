@@ -17,22 +17,12 @@ export const Container = styled.div`
 		color: #fff;
 	}
 	.title {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) var(--unnamed-font-size-23) /
-			var(--unnamed-line-spacing-34) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0);
-		color: var(--unnamed-color-000000);
 		text-align: center;
 		font: normal normal normal 23px/34px Poppins;
 		letter-spacing: 0px;
 		color: #000000;
 	}
 	.sub-title {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
-			var(--unnamed-line-spacing-22) var(--unnamed-font-family-source-sans-pro);
-		letter-spacing: var(--unnamed-character-spacing-0-01);
-		color: var(--unnamed-color-000000);
 		text-align: center;
 		font: normal normal normal 16px/22px Source Sans Pro;
 		letter-spacing: 0.01px;
@@ -87,7 +77,6 @@ export const Container = styled.div`
 		top: 0;
 		padding: 10px;
 		right: 0px;
-		background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
 		background: #ffffff 0% 0% no-repeat padding-box;
 		box-shadow: 0px 3px 10px #00000029;
 		border-radius: 10px;
@@ -101,11 +90,6 @@ export const Container = styled.div`
 		font-size: 14px;
 	}
 	.information {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-17) / 24px
-			var(--unnamed-font-family-source-sans-pro);
-		letter-spacing: var(--unnamed-character-spacing-0-02);
-		color: var(--unnamed-color-2865b3);
 		text-align: left;
 		text-decoration: underline;
 		font: normal normal bold 17px/24px Source Sans Pro;
@@ -129,7 +113,6 @@ export const InputContainer = styled.div`
 	.input {
 		width: 100%;
 		height: 32px;
-		background: var(--unnamed-color-f4f4f5) 0% 0% no-repeat padding-box;
 		background: #f4f4f5 0% 0% no-repeat padding-box;
 		border-radius: 5px;
 		border: ${(props) =>
@@ -158,7 +141,6 @@ export const InputContainer = styled.div`
 export const Button = styled.div`
 	width: 320px;
 	height: 31px;
-	background: var(--unnamed-color-2865b3) 0% 0% no-repeat padding-box;
 	background: #2865b3 0% 0% no-repeat padding-box;
 	border-radius: 8px;
 	border: none;

@@ -29,10 +29,11 @@ export const Container = styled.div`
 			display: grid;
 			grid-template-columns: 1fr;
 			padding-top: 0px;
+			margin-top: 30px !important;
 			gap: 30px;
 		}
-		margin: 3rem;
-		padding-top: 100px;
-		padding-bottom: 0px;
+		margin: 0rem;
+		padding: 100px 30px !important;
+		max-width: 100vw;
 	}
 `;

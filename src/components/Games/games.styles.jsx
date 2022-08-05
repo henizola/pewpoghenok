@@ -38,6 +38,7 @@ export const Matches = styled.div`
 		margin-top: 30px;
 	}
 	@media screen and (max-width: 600px) {
+		padding: 50px 5%;
 		.match-list {
 			grid-template-columns: 1fr;
 			max-width: 90vw;

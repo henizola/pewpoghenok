@@ -34,6 +34,11 @@ export const Contanier = styled.div`
 		text-align: left;
 		margin-top: 50px;
 	}
+	@media screen and (max-width: 600px) {
+		.nav {
+			margin-top: 10px;
+		}
+	}
 	.tab {
 		text-align: left;
 		font: normal normal normal 21px/32px Poppins;
@@ -196,6 +201,7 @@ export const Contanier = styled.div`
 			border-bottom: 1px solid #707070;
 			padding: 0;
 			text-align: center !important;
+			margin-top: 0px;
 		}
 	}
 	@media screen and (max-width: 600px) {
@@ -208,7 +214,7 @@ export const Contanier = styled.div`
 		}
 
 		.content {
-			padding-top: 0px;
+			padding-top: 100px;
 		}
 	}
 `;

@@ -6,11 +6,6 @@ export const Container = styled.div`
 
 	margin: 0;
 	.header {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-28) /
-			var(--unnamed-line-spacing-42) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0);
-		color: var(--unnamed-color-ef4444);
 		text-align: left;
 		font: normal normal bold 28px/42px Poppins;
 		letter-spacing: 0px;
@@ -38,23 +33,12 @@ export const Matches = styled.div`
 		display: flex;
 	}
 	.title {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-30) /
-			var(--unnamed-line-spacing-46) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0-01);
-		color: var(--unnamed-color-000000);
-
 		font: normal normal bold 30px/46px Poppins;
-
 		color: #000000;
 	}
 	.filter {
 		margin: 13px 20px;
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
-			var(--unnamed-line-spacing-22) var(--unnamed-font-family-source-sans-pro);
-		letter-spacing: var(--unnamed-character-spacing-0-01);
-		color: var(--unnamed-color-000000);
+
 		font: normal normal normal 16px/22px Source Sans Pro;
 	}
 

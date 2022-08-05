@@ -6,11 +6,6 @@ export const Container = styled.div`
 	margin: 0;
 	padding-bottom: 100px;
 	.header {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-28) /
-			var(--unnamed-line-spacing-42) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0);
-		color: var(--unnamed-color-ef4444);
 		text-align: left;
 		font: normal normal bold 28px/42px Poppins;
 		letter-spacing: 0px;
@@ -26,6 +21,14 @@ export const Container = styled.div`
 		width: 100vw;
 		height: 400px;
 		object-fit: cover;
+	}
+
+	@media screen and (max-width: 600px) {
+		.header {
+			padding: 100px 20px !important;
+			flex-direction: column;
+			padding-bottom: 30px !important;
+		}
 	}
 `;
 

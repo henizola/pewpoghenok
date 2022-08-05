@@ -10,11 +10,20 @@ export const Container = styled.div`
 	width: 368px;
 
 	text-align: center;
+
 	.close {
 		position: absolute;
 		top: 0;
 		right: -20px;
 		color: #fff;
+	}
+
+	@media screen and(max-width:600px) {
+		.close {
+			right: 20px;
+			color: black;
+			z-index: 999999999999;
+		}
 	}
 	.title {
 		font: var(--unnamed-font-style-normal) normal

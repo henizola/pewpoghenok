@@ -11,6 +11,13 @@ export const Container = styled.div`
 		right: -20px;
 		color: #fff;
 	}
+	@media screen and(max-width:600px) {
+		.close {
+			right: 20px;
+			color: black;
+			z-index: 999999999999;
+		}
+	}
 	.title {
 		text-align: center;
 		font: normal normal normal 23px/34px Poppins;

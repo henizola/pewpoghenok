@@ -11,6 +11,31 @@ export const Container = styled.div`
 		right: -20px;
 		color: #fff;
 	}
+	.top {
+		text-align: left;
+	}
+	.input-title {
+		text-align: left;
+		font: normal normal medium 14px/21px Poppins;
+		letter-spacing: 0.01px;
+		color: #3f3f46;
+	}
+	.match__name {
+		width: 320px;
+		height: 32px;
+		background: #f4f4f5 0% 0% no-repeat padding-box;
+		border-radius: 5px;
+		padding: 4px 8px;
+	}
+	.replace {
+		margin-top: 29px;
+		margin-bottom: 24px;
+		text-align: left;
+		text-align: left;
+		font: normal normal medium 14px/21px Poppins;
+		letter-spacing: 0.01px;
+		color: #4e80ee;
+	}
 	@media screen and(max-width:600px) {
 		.close {
 			right: 20px;
@@ -115,7 +140,6 @@ export const InputContainer = styled.div`
 		width: 320px !important;
 
 		height: 32px;
-		background: var(--unnamed-color-f4f4f5) 0% 0% no-repeat padding-box;
 		background: #f4f4f5 0% 0% no-repeat padding-box;
 		border-radius: 5px;
 		border: ${(props) =>
@@ -156,4 +180,11 @@ export const Button = styled.div`
 	letter-spacing: 0.02px;
 	color: #a1a1aa;
 	opacity: 1;
+	width: 320px;
+	height: 31px;
+	background: var(--unnamed-color-4e80ee) 0% 0% no-repeat padding-box;
+	background: #4e80ee 0% 0% no-repeat padding-box;
+	border-radius: 8px;
+	color: #fff;
+	padding-top: 5px;
 `;

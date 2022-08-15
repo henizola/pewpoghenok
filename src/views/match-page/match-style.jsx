@@ -53,11 +53,9 @@ export const Container = styled.div`
 
 		opacity: 1;
 	}
+
 	.match-row span {
-		margin: auto 10px;
-		/* display: flex;
-    justify-content: space-around;
-    align-items: end; */
+		margin: auto 5px;
 	}
 	.sub-row {
 		display: flex;

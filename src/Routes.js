@@ -9,7 +9,7 @@ import MinimalView from "./layout/minimal/MinimalView";
 import Currency from "./views/Currency/Currency";
 import SignIn from "./views/SignIn/SignIn";
 import SignUp from "./views/SignUp/SignUp";
-import MatchPage from "./views/match-page.jsx/match";
+import MatchPage from "./views/match-page/match";
 const Routes = () => {
 	return (
 		<Switch>

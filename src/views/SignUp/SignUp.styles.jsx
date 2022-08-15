@@ -12,11 +12,6 @@ export const Container = styled.div`
 	.title {
 		width: 100%;
 		text-align: center;
-		font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
-			var(--unnamed-font-size-58) / var(--unnamed-line-spacing-87)
-			var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing--0-03);
-		color: var(--unnamed-color-ffffff);
 		text-align: center;
 		font: normal normal 600 58px/87px Poppins;
 		letter-spacing: -0.03px;
@@ -26,7 +21,6 @@ export const Container = styled.div`
 		margin-left: 50%;
 		transform: translateX(-50%);
 		display: grid;
-
 		grid-gap: 25px;
 		width: fit-content;
 		height: 57vh;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-	width: 368px;
+	width: 100%;
 
 	height: 100%;
 	text-align: center;
@@ -50,8 +50,9 @@ export const Container = styled.div`
 	.menu {
 		position: absolute;
 		top: 0;
+		top: -6px;
 		padding: 8px !important;
-		right: 50px;
+		right: 5px;
 
 		width: 200px;
 		height: fit-content;
@@ -97,7 +98,7 @@ export const Container = styled.div`
 export const InputContainer = styled.div`
 	width: 100%;
 	height: fit-content;
-	margin-top: 15px;
+	margin-top: 24px;
 	text-align: left;
 	color: ${(props) =>
 		props.error === "invalid"
@@ -106,7 +107,8 @@ export const InputContainer = styled.div`
 			? " #4F8CE3"
 			: "none"};
 	.input {
-		width: 100%;
+		width: 320px !important;
+
 		height: 32px;
 		background: var(--unnamed-color-f4f4f5) 0% 0% no-repeat padding-box;
 		background: #f4f4f5 0% 0% no-repeat padding-box;
@@ -138,7 +140,7 @@ export const Button = styled.div`
 	color: #fff;
 	padding-top: 4px;
 	margin: 0 auto;
-	margin-top: 28px;
+	margin-top: 32px;
 	cursor: pointer;
 	font: normal normal bold 14px/21px Poppins;
 	letter-spacing: 0.02px;

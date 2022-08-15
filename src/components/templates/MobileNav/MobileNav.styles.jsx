@@ -8,6 +8,9 @@ export const Container = styled.div`
 	padding: 0px 140px;
 	height: fit-content !important;
 	width: 100vw;
+	max-width: 1400px;
+	margin: 0 auto !important;
+
 	background-color: #fff;
 	z-index: 999999999999999999999999999999999999999999999999;
 	background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
@@ -116,7 +119,7 @@ export const Container = styled.div`
 			text-align: left;
 			font: normal normal bold 17px/24px Source Sans Pro;
 			letter-spacing: 0.02px;
-			color: #ba3c3d;
+			color: #ef4444;
 			padding: 0;
 			margin: 0;
 			background-color: transparent;

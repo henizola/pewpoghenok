@@ -11,6 +11,7 @@ export const Container = styled.div`
 	border-radius: 10px;
 	padding: 70px 30px;
 	color: #fff;
+
 	gap: 16px;
 	.price {
 		position: absolute;

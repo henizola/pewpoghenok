@@ -92,13 +92,9 @@ const LoggedInNav = (props) => {
 			<div className='right'>
 				<button className='red-link' onClick={openSolo}>
 					Solo Match
-					<BsFillPersonPlusFill
-						style={{ fontSize: "23px", marginLeft: "7px" }}
-					/>
 				</button>
 				<button className='red-link' onClick={openTeam}>
-					Team Match{" "}
-					<MdGroups style={{ fontSize: "32px", marginLeft: "7px" }} />
+					Team Match
 				</button>
 				<p className='info'>
 					<p>2,123 pogs</p>

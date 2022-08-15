@@ -20,7 +20,7 @@ html {
 */
 body {
   font-size: 1.4rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: Poppins;
 
 }
 
@@ -41,7 +41,7 @@ body {
 .btn {
   font-size: 1.6rem;
   line-height: 1.8;
-  font-family: "Montserrat", sans-serif;
+  font-family: Poppins;
 }
 
 .st_btn_primary {
@@ -119,6 +119,13 @@ top:100%;
 
 
 .css-f6zvhu{
-  padding:28px!important;
+  padding:32px 24px!important;
   width:fit-content!important;
 }
+
+.valid__button {
+  background-color: #2865b3!important;
+  color:#fff!important;
+}
+
+

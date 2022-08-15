@@ -4,12 +4,16 @@ import ModalContainer from "../Modal/Modal.component";
 import { Button, Container, InputContainer } from "./JoinMatch.styles";
 import avatar from "../..//assets/avatar1.png";
 
-const JoinMatch = ({ open, setOpen, onClose }) => {
+const JoinMatch = ({ open, setOpen, onClose, handleClose }) => {
 	const handleOpen = () => {
 		setOpen(true);
 	};
 	return (
-		<ModalContainer open={open} handleOpen={handleOpen}>
+		<ModalContainer
+			open={open}
+			handleOpen={handleOpen}
+			handleClose={handleClose}
+		>
 			<Container>
 				<div>
 					<h4 className='title'>Join Team Match</h4>

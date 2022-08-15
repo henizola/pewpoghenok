@@ -7,11 +7,6 @@ export const Container = styled.div`
 	text-align: center;
 
 	.title {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) var(--unnamed-font-size-23) /
-			var(--unnamed-line-spacing-34) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0);
-		color: var(--unnamed-color-000000);
 		text-align: center;
 		font: normal normal normal 23px/34px Poppins;
 		letter-spacing: 0px;
@@ -29,7 +24,7 @@ export const Container = styled.div`
 		color: #000000;
 	}
 	.input {
-		width: 100%;
+		width: 320px !important;
 		border: none;
 		background-color: #f0f0f0;
 		height: 40px;
@@ -80,7 +75,7 @@ export const Container = styled.div`
 export const InputContainer = styled.div`
 	width: 100%;
 	height: fit-content;
-	margin-top: 15px;
+	margin-top: 24px;
 	text-align: left;
 `;
 
@@ -94,6 +89,6 @@ export const Button = styled.div`
 	color: #fff;
 	padding-top: 8px;
 	margin: 0 auto;
-	margin-top: 28px;
+	margin-top: 32px;
 	cursor: pointer;
 `;

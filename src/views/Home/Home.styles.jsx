@@ -12,7 +12,9 @@ export const Container = styled.div`
 		color: #ef4444;
 		padding: 25px 140px;
 		width: 100vw;
-		margin: 0 !important;
+		max-width: 1400px;
+		margin: 0 auto !important;
+
 		display: flex;
 		justify-content: space-between;
 	}
@@ -28,6 +30,8 @@ export const Matches = styled.div`
 	width: 100%;
 	margin-top: 50px;
 	padding: 20px 140px;
+	max-width: 1400px;
+	margin: 0 auto !important;
 
 	.match-head {
 		display: flex;

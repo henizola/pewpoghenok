@@ -29,6 +29,7 @@ const Currency = () => {
 						img={pog.img}
 						pog={pog.pog}
 						handleOpen={handleOpen}
+						handleClose={handleClose}
 						price={pog.price}
 					/>
 				))}

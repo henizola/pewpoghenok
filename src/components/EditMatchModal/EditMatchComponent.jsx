@@ -2,8 +2,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
-import ModalContainer from "../Modal/Modal.component";
-import { Button, Container, InputContainer, Warning } from "./SoloModal.styles";
+import { Button, Container, InputContainer } from "./EditMatch.styles";
 
 const style = {
 	position: "absolute",

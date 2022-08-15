@@ -1,16 +1,14 @@
 import React from "react";
-import { BiSearchAlt2 } from "react-icons/bi";
+import { BsForwardFill } from "react-icons/bs";
 import ModalContainer from "../Modal/Modal.component";
 import { Button, Container, InputContainer } from "./SoloModal.styles";
-import avatar from "../..//assets/avatar1.png";
-import { BsForwardFill } from "react-icons/bs";
 
 const CashOut = ({ open, setOpen, onClose }) => {
 	const handleOpen = () => {
 		setOpen(true);
 	};
 	return (
-		<ModalContainer open={open} handleOpen={handleOpen}>
+		<ModalContainer open={open} handleOpen={handleOpen} onClose={onClose}>
 			<Container>
 				<div className='colu'>
 					<div>
@@ -28,14 +26,14 @@ const CashOut = ({ open, setOpen, onClose }) => {
 								<span>
 									<BsForwardFill />
 								</span>
-								<input type='text' className='input' disabled />{" "}
-							</div>{" "}
-						</InputContainer>{" "}
+								<input type='text' className='input' disabled />
+							</div>
+						</InputContainer>
 						<InputContainer>
-							<p className='input-title'>Send to account*</p>{" "}
+							<p className='input-title'>Send to account*</p>
 							<select className='input'>
-								<option>Select</option>{" "}
-							</select>{" "}
+								<option>Select</option>
+							</select>
 						</InputContainer>
 					</div>
 

@@ -127,7 +127,7 @@ const MobileNav = (props) => {
 					/>
 				</button>
 				<button className='fill-red' onClick={openTeam}>
-					Team Match{" "}
+					Team Match
 					<MdGroups style={{ fontSize: "32px", marginLeft: "7px" }} />
 				</button>
 			</div>

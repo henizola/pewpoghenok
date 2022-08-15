@@ -6,12 +6,10 @@ export const Container = styled.div`
 	width: 100%;
 	margin-top: 50px;
 	padding: 80px 140px;
+	max-width: 1400px;
+	margin: 0 auto !important;
+
 	.title {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-30) /
-			var(--unnamed-line-spacing-46) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0);
-		color: var(--unnamed-color-4a4a4a);
 		text-align: left;
 		font: normal normal bold 30px/46px Poppins;
 		letter-spacing: 0px;

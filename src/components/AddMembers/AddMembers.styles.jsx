@@ -7,7 +7,6 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 368px;
 
 	text-align: center;
 
@@ -26,29 +25,21 @@ export const Container = styled.div`
 		}
 	}
 	.title {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) var(--unnamed-font-size-23) /
-			var(--unnamed-line-spacing-34) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0);
-		color: var(--unnamed-color-000000);
 		text-align: center;
 		font: normal normal normal 23px/34px Poppins;
 		letter-spacing: 0px;
 		color: #000000;
+		margin: 0;
 	}
 	.sub-title {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
-			var(--unnamed-line-spacing-22) var(--unnamed-font-family-source-sans-pro);
-		letter-spacing: var(--unnamed-character-spacing-0-01);
-		color: var(--unnamed-color-000000);
 		text-align: center;
 		font: normal normal normal 16px/22px Source Sans Pro;
 		letter-spacing: 0.01px;
 		color: #000000;
+		margin-top: 16px;
 	}
 	.input {
-		width: 320px;
+		width: 320px !important;
 		height: 32px;
 		border: none;
 		background-color: #f0f0f0;
@@ -70,10 +61,15 @@ export const Container = styled.div`
 		border-radius: 8px;
 		padding: 10px 14px;
 		padding-bottom: 0;
+		height: 40px;
+		p {
+			text-align: left;
+			padding-left: 8px;
+		}
 	}
 	.remove {
 		cursor: pointer;
-		text-align: right;
+		text-align: right !important;
 	}
 	.select:after {
 		color: red !important;
@@ -84,6 +80,8 @@ export const Container = styled.div`
 
 	.sub-title {
 		font-size: 16px;
+		margin: 0;
+		margin-top: 16px;
 	}
 	@media screen and (max-width: 600px) {
 		max-width: 90vw;
@@ -96,7 +94,6 @@ export const Container = styled.div`
 		top: 0;
 		padding: 10px;
 		right: 0px;
-		background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
 		background: #ffffff 0% 0% no-repeat padding-box;
 		box-shadow: 0px 3px 10px #00000029;
 		border-radius: 10px;
@@ -110,11 +107,6 @@ export const Container = styled.div`
 		font-size: 14px;
 	}
 	.information {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-17) / 24px
-			var(--unnamed-font-family-source-sans-pro);
-		letter-spacing: var(--unnamed-character-spacing-0-02);
-		color: var(--unnamed-color-2865b3);
 		text-align: left;
 		text-decoration: underline;
 		font: normal normal bold 17px/24px Source Sans Pro;
@@ -126,7 +118,7 @@ export const Container = styled.div`
 export const InputContainer = styled.div`
 	width: 100%;
 	height: fit-content;
-	margin-top: 15px;
+	margin-top: 32px;
 	text-align: left;
 	position: relative;
 	color: ${(props) =>
@@ -136,7 +128,7 @@ export const InputContainer = styled.div`
 			? " #4F8CE3"
 			: "none"};
 	.input {
-		width: 100%;
+		width: 320px !important;
 		height: 32px;
 		background: var(--unnamed-color-f4f4f5) 0% 0% no-repeat padding-box;
 		background: #f4f4f5 0% 0% no-repeat padding-box;
@@ -149,6 +141,8 @@ export const InputContainer = styled.div`
 				: "none"};
 
 		padding: 5px;
+		padding-left: 8px;
+
 		&:focus {
 			outline: none;
 		}
@@ -158,7 +152,7 @@ export const InputContainer = styled.div`
 	}
 	.icon {
 		position: absolute;
-		right: 10px;
+		right: 8px;
 		top: 5px;
 		font-size: 25px;
 	}
@@ -174,7 +168,7 @@ export const Button = styled.div`
 	color: #fff;
 	padding-top: 4px;
 	margin: 0 auto;
-	margin-top: 28px;
+	margin-top: 32px;
 	cursor: pointer;
 	font: normal normal bold 14px/21px Poppins;
 	letter-spacing: 0.02px;

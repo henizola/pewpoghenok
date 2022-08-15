@@ -16,12 +16,12 @@ const style = {
 	borderRadius: "15px",
 };
 
-export default function ModalContainer({ children, open, handleClose }) {
+export default function ModalContainer({ children, open, onClose }) {
 	return (
 		<div>
 			<Modal
 				open={open}
-				onClose={handleClose}
+				onClose={onClose}
 				aria-labelledby='modal-modal-title'
 				aria-describedby='modal-modal-description'
 			>

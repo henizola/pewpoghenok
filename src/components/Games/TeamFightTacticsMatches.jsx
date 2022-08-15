@@ -39,12 +39,12 @@ const TeamFightTacticsMatches = () => {
 					</FilterButtonsContainer>
 				</div>
 				<div className='match-list'>
-					<Match handleOpen={handleOpen} />
-					<Match handleOpen={handleOpen} />
-					<Match handleOpen={handleOpen} />
-					<Match handleOpen={handleOpen} />
-					<Match handleOpen={handleOpen} />
-					<Match handleOpen={handleOpen} />
+					<Match handleOpen={handleOpen} handleClose={handleClose} />
+					<Match handleOpen={handleOpen} handleClose={handleClose} />
+					<Match handleOpen={handleOpen} handleClose={handleClose} />
+					<Match handleOpen={handleOpen} handleClose={handleClose} />
+					<Match handleOpen={handleOpen} handleClose={handleClose} />
+					<Match handleOpen={handleOpen} handleClose={handleClose} />
 				</div>
 			</Matches>
 			<JoinMatch open={open} onClose={handleClose} />

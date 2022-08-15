@@ -7,7 +7,6 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 368px;
 
 	text-align: center;
 	.close {
@@ -36,7 +35,7 @@ export const Container = styled.div`
 		color: #000000;
 	}
 	.input {
-		width: 320px;
+		width: 320px !important;
 		height: 32px;
 		border: none;
 		background-color: #f0f0f0;
@@ -108,7 +107,7 @@ export const Container = styled.div`
 export const InputContainer = styled.div`
 	width: 100%;
 	height: fit-content;
-	margin-top: 15px;
+	margin-top: 24px;
 	text-align: left;
 	position: relative;
 	color: ${(props) =>
@@ -118,7 +117,8 @@ export const InputContainer = styled.div`
 			? " #4F8CE3"
 			: "none"};
 	.input {
-		width: 100%;
+		width: 320px !important;
+
 		height: 32px;
 		background: #f4f4f5 0% 0% no-repeat padding-box;
 		border-radius: 5px;

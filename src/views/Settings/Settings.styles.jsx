@@ -4,7 +4,10 @@ export const Container = styled.div`
 	width: 100vw;
 	height: calc(100vh -100px);
 	padding: 0px 140px;
-	margin: 0;
+
+	max-width: 1400px;
+	margin: 0 auto !important;
+
 	.header {
 		text-align: left;
 		font: normal normal normal 40px/60px Poppins;
@@ -37,12 +40,6 @@ export const Matches = styled.div`
 		display: flex;
 	}
 	.title {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-30) /
-			var(--unnamed-line-spacing-46) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0-01);
-		color: var(--unnamed-color-000000);
-
 		font: normal normal bold 30px/46px Poppins;
 
 		color: #000000;

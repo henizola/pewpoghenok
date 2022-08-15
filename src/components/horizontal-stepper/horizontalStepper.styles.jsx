@@ -11,8 +11,11 @@ export const Container = styled.div`
 		letter-spacing: 0px;
 		color: #ef4444;
 		padding: 25px 140px;
+		max-width: 1400px;
+
 		width: 100vw;
-		margin: 0 !important;
+		margin: 0 auto !important;
+
 		display: flex;
 		justify-content: space-between;
 	}
@@ -36,19 +39,14 @@ export const Matches = styled.div`
 	width: 100%;
 	margin-top: 50px;
 	padding: 20px 140px;
+	max-width: 1400px;
+	margin: 0 auto !important;
 
 	.match-head {
 		display: flex;
 	}
 	.title {
-		font: var(--unnamed-font-style-normal) normal
-			var(--unnamed-font-weight-bold) var(--unnamed-font-size-30) /
-			var(--unnamed-line-spacing-46) var(--unnamed-font-family-poppins);
-		letter-spacing: var(--unnamed-character-spacing-0-01);
-		color: var(--unnamed-color-000000);
-
 		font: normal normal bold 30px/46px Poppins;
-
 		color: #000000;
 	}
 	.filter {

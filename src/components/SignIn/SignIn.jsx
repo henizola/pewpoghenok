@@ -24,7 +24,7 @@ export const Container = styled.div`
 		color: #3f3f46;
 	}
 	.input {
-		width: 100%;
+		width: 320px !important;
 		border: none;
 		background-color: #f0f0f0;
 		height: 40px;

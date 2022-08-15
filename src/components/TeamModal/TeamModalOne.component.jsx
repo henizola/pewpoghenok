@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import ModalContainer from "../Modal/Modal.component";
 import { Button, Container, InputContainer } from "./TeamModal.styles";
@@ -22,7 +22,9 @@ const TeamModal1 = ({ open, setOpen, onClose, onNext }) => {
 	const handleOpen = () => {
 		setOpen(true);
 	};
-
+	const handleClose = () => {
+		setOpen(false);
+	};
 	const [warning, setWarning] = useState(false);
 	const [name, setName] = useState("");
 	const [game, setGame] = useState("");
@@ -30,6 +32,19 @@ const TeamModal1 = ({ open, setOpen, onClose, onNext }) => {
 	const [loot, setLoot] = useState("");
 	const [detail, setDetail] = useState("");
 	const [tag, setTag] = useState("");
+	const [valid, setValid] = useState(false);
+	useEffect(() => {
+		if (
+			name.length > 1 &&
+			game.length > 1 &&
+			date.length > 1 &&
+			loot.length > 1 &&
+			detail.length > 1 &&
+			tag.length > 1
+		) {
+			setValid(true);
+		}
+	}, [name, game, date, loot, detail, tag]);
 
 	const handleSubmit = () => {
 		if (
@@ -59,13 +74,14 @@ const TeamModal1 = ({ open, setOpen, onClose, onNext }) => {
 		<div>
 			<Modal
 				open={open}
+				onClose={onClose}
 				aria-labelledby='modal-modal-title'
 				aria-describedby='modal-modal-description'
 			>
 				<Box sx={style}>
-					<ModalContainer open={open} handleOpen={handleOpen}>
+					<ModalContainer open={open} handleOpen={handleOpen} onClose={onClose}>
 						<Container>
-							<h4 className='title'>Create Team Match</h4>
+							<h4 className='title'>Create Team Match ola</h4>
 							<button className='close' onClick={onClose}>
 								X
 							</button>
@@ -164,7 +180,12 @@ const TeamModal1 = ({ open, setOpen, onClose, onNext }) => {
 								/>
 								<p className='warning'>This field is required</p>
 							</InputContainer>
-							<Button onClick={handleSubmit}>NEXT</Button>
+							<Button
+								onClick={handleSubmit}
+								className={`${valid ? "valid__button" : ""}`}
+							>
+								NEXT
+							</Button>
 						</Container>
 					</ModalContainer>
 				</Box>

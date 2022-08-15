@@ -9,7 +9,7 @@ const AddMembers = ({ open, setOpen, onClose }) => {
 		setOpen(true);
 	};
 	return (
-		<ModalContainer open={open} handleOpen={handleOpen}>
+		<ModalContainer open={open} handleOpen={handleOpen} onClose={onClose}>
 			<Container>
 				<div>
 					<h4 className='title'>Create Team Match</h4>
@@ -35,7 +35,7 @@ const AddMembers = ({ open, setOpen, onClose }) => {
 
 				<div>
 					<Button onClick={onClose}>Submit</Button>
-					<p style={{ marginTop: "10px" }}>Step 2 of 2</p>
+					<p style={{ marginTop: "16px", marginBottom: "0px" }}>Step 2 of 2</p>
 				</div>
 			</Container>
 		</ModalContainer>

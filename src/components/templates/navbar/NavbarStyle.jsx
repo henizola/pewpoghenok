@@ -8,6 +8,9 @@ export const Container = styled.div`
 	padding: 12px 140px;
 	height: 56px;
 	width: 100vw;
+	max-width: 1400px;
+	margin: 0 auto !important;
+
 	background-color: #fff;
 	z-index: 999999999999999999999999999999999999999999999999;
 	background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;

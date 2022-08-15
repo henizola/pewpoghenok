@@ -9,10 +9,9 @@ export const Container = styled.div`
 	border-radius: 10px;
 	opacity: 1;
 	padding: 16px 24px;
-	&:hover {
-		box-shadow: -3px 3px 0px #27272a;
-		border: 2px solid #27272a;
-	}
+	box-shadow: -3px 3px 0px #27272a;
+	border: 2px solid #27272a;
+
 	.space {
 		display: flex;
 		justify-content: space-between;

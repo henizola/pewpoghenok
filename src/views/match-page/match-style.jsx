@@ -76,6 +76,7 @@ export const Container = styled.div`
 		color: #4e80ee;
 		opacity: 1;
 		margin: auto 10px;
+		cursor: pointer;
 	}
 	.match-name {
 		display: inline-block;

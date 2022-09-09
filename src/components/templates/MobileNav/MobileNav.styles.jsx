@@ -10,7 +10,6 @@ export const Container = styled.div`
 	width: 100vw;
 	max-width: 1400px;
 	margin: 0 auto !important;
-
 	background-color: #fff;
 	z-index: 999999999999999999999999999999999999999999999999;
 	background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
@@ -54,7 +53,7 @@ export const Container = styled.div`
 		letter-spacing: var(--unnamed-character-spacing-0-02);
 		color: var(---d44244);
 
-		font: normal normal bold 17px/24px Source Sans Pro;
+		font: normal normal bold 22px/32px Source Sans Pro;
 		letter-spacing: 0.02px;
 		color: #d44244;
 		text-align: center;
@@ -73,7 +72,7 @@ export const Container = styled.div`
 		letter-spacing: var(--unnamed-character-spacing-0-02);
 		color: var(---d44244);
 		text-align: center;
-		font: normal normal bold 17px/24px Source Sans Pro;
+		font: normal normal bold 22x/32px Source Sans Pro;
 		letter-spacing: 0.02px;
 		color: #d44244;
 		padding-top: 0px;
@@ -136,6 +135,7 @@ export const Container = styled.div`
 		margin-top: -25px;
 		color: #a2a2a2;
 	}
+
 	@media screen and (max-width: 600px) {
 		height: fit-content;
 		display: grid;

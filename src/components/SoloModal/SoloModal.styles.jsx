@@ -130,6 +130,26 @@ export const InputContainer = styled.div`
 			outline: none;
 		}
 	}
+
+	.input__second {
+		width: 120px !important;
+
+		height: 32px;
+		background: var(--unnamed-color-f4f4f5) 0% 0% no-repeat padding-box;
+		background: #f4f4f5 0% 0% no-repeat padding-box;
+		border-radius: 5px;
+		border: ${(props) =>
+			props.error === "invalid"
+				? "1px solid #DC2626!important"
+				: props.error === "valid"
+				? "1px solid #4F8CE3"
+				: "none"};
+
+		padding: 5px;
+		&:focus {
+			outline: none;
+		}
+	}
 	.warning {
 		display: ${(props) => (props.error === "invalid" ? "block" : "none")};
 	}

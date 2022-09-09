@@ -8,12 +8,9 @@ const JoinMatch = ({ open, setOpen, onClose, handleClose }) => {
 	const handleOpen = () => {
 		setOpen(true);
 	};
+
 	return (
-		<ModalContainer
-			open={open}
-			handleOpen={handleOpen}
-			handleClose={handleClose}
-		>
+		<ModalContainer open={open} handleOpen={handleOpen} onClose={onClose}>
 			<Container>
 				<div>
 					<h4 className='title'>Join Team Match</h4>

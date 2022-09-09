@@ -9,12 +9,14 @@ export const Container = styled.div`
 	justify-content: space-between;
 
 	text-align: center;
+
 	.close {
 		position: absolute;
 		top: 0;
 		right: -20px;
 		color: #fff;
 	}
+
 	@media screen and(max-width:600px) {
 		.close {
 			right: 20px;
@@ -27,12 +29,14 @@ export const Container = styled.div`
 		font: normal normal normal 23px/34px Poppins;
 		letter-spacing: 0px;
 		color: #000000;
+		margin: 0;
 	}
 	.sub-title {
 		text-align: center;
 		font: normal normal normal 16px/22px Source Sans Pro;
 		letter-spacing: 0.01px;
 		color: #000000;
+		margin-top: 16px;
 	}
 	.input {
 		width: 320px !important;
@@ -57,10 +61,15 @@ export const Container = styled.div`
 		border-radius: 8px;
 		padding: 10px 14px;
 		padding-bottom: 0;
+		height: 40px;
+		p {
+			text-align: left;
+			padding-left: 8px;
+		}
 	}
 	.remove {
 		cursor: pointer;
-		text-align: right;
+		text-align: right !important;
 	}
 	.select:after {
 		color: red !important;
@@ -71,6 +80,8 @@ export const Container = styled.div`
 
 	.sub-title {
 		font-size: 16px;
+		margin: 0;
+		margin-top: 16px;
 	}
 	@media screen and (max-width: 600px) {
 		max-width: 90vw;
@@ -107,7 +118,7 @@ export const Container = styled.div`
 export const InputContainer = styled.div`
 	width: 100%;
 	height: fit-content;
-	margin-top: 24px;
+	margin-top: 32px;
 	text-align: left;
 	position: relative;
 	color: ${(props) =>
@@ -118,8 +129,8 @@ export const InputContainer = styled.div`
 			: "none"};
 	.input {
 		width: 320px !important;
-
 		height: 32px;
+		background: var(--unnamed-color-f4f4f5) 0% 0% no-repeat padding-box;
 		background: #f4f4f5 0% 0% no-repeat padding-box;
 		border-radius: 5px;
 		border: ${(props) =>
@@ -130,6 +141,8 @@ export const InputContainer = styled.div`
 				: "none"};
 
 		padding: 5px;
+		padding-left: 8px;
+
 		&:focus {
 			outline: none;
 		}
@@ -139,7 +152,7 @@ export const InputContainer = styled.div`
 	}
 	.icon {
 		position: absolute;
-		right: 10px;
+		right: 8px;
 		top: 5px;
 		font-size: 25px;
 	}
@@ -148,13 +161,14 @@ export const InputContainer = styled.div`
 export const Button = styled.div`
 	width: 320px;
 	height: 31px;
+	background: var(--unnamed-color-2865b3) 0% 0% no-repeat padding-box;
 	background: #2865b3 0% 0% no-repeat padding-box;
 	border-radius: 8px;
 	border: none;
 	color: #fff;
 	padding-top: 4px;
 	margin: 0 auto;
-	margin-top: 28px;
+	margin-top: 32px;
 	cursor: pointer;
 	font: normal normal bold 14px/21px Poppins;
 	letter-spacing: 0.02px;

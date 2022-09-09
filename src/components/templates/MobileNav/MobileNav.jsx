@@ -75,14 +75,6 @@ const MobileNav = (props) => {
 	};
 	return (
 		<Container style={{ display: (solo || team || addMembers) && "none" }}>
-			<SoloModal open={solo} setOpen={openSolo} onClose={onClose} />
-			<TeamModal
-				open={team}
-				setOpen={openTeam}
-				onClose={onClose}
-				onNext={onNext}
-			/>
-			<AddMembers open={addMembers} setOpen={openMembers} onClose={onClose} />
 			<Link to='/'>
 				<h1 className='logo'>PEWPOG</h1>
 			</Link>
@@ -122,15 +114,19 @@ const MobileNav = (props) => {
 			<div className='right'>
 				<button className='outline-red' onClick={openSolo}>
 					Solo Match
-					<BsFillPersonPlusFill
-						style={{ fontSize: "23px", marginLeft: "7px" }}
-					/>
 				</button>
 				<button className='fill-red' onClick={openTeam}>
 					Team Match
-					<MdGroups style={{ fontSize: "32px", marginLeft: "7px" }} />
 				</button>
 			</div>
+			<SoloModal open={solo} setOpen={openSolo} onClose={onClose} />
+			<TeamModal
+				open={team}
+				setOpen={openTeam}
+				onClose={onClose}
+				onNext={onNext}
+			/>
+			<AddMembers open={addMembers} setOpen={openMembers} onClose={onClose} />
 		</Container>
 	);
 };

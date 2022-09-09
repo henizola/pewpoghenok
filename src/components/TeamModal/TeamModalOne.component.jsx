@@ -81,7 +81,7 @@ const TeamModal1 = ({ open, setOpen, onClose, onNext }) => {
 				<Box sx={style}>
 					<ModalContainer open={open} handleOpen={handleOpen} onClose={onClose}>
 						<Container>
-							<h4 className='title'>Create Team Match ola</h4>
+							<h4 className='title'>Create Team Match </h4>
 							<button className='close' onClick={onClose}>
 								X
 							</button>

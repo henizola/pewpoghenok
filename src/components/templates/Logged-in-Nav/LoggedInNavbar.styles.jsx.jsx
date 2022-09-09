@@ -91,6 +91,7 @@ export const Container = styled.div`
 		grid-template-columns: 100px 1fr;
 		max-width: 100vw;
 		display: none;
+
 		.right {
 			display: flex;
 			justify-content: space-between;

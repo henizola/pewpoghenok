@@ -38,7 +38,7 @@ const EditMatchModal = ({ open, onClose }) => {
 						<p className='match__name'>A Really Long Title Match Name</p>
 					</div>
 
-					<p className='replace'>Replacr Image</p>
+					<p className='replace'>Replace Image</p>
 					<p className='input-title'>Match Details </p>
 					<div style={{ height: "168px!important" }}>
 						<CKEditor

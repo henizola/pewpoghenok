@@ -4,22 +4,27 @@ import { Button, Container } from "./PaymentModal.styles";
 
 import payment from "../../assets/pay.png";
 
-const PaymentModal = ({ open, handleClose, handleOpen }) => {
-	return (
-		<ModalContainer
-			open={open}
-			handleOpen={handleOpen}
-			handleClose={handleClose}
-		>
-			<Container>
-				<h4 className='title'>Payment</h4>
-				<p className='sub-title'></p>
-				<img src={payment} alt='' className='payment' />
+const PaymentModal = ({ open, handleClose, handleOpen, pog }) => {
+  console.log(pog);
+  return (
+    <ModalContainer
+      open={open}
+      handleOpen={handleOpen}
+      handleClose={handleClose}
+    >
+      <Container>
+        <h4 className="title">Payment</h4>
+        <p className="sub-title">
+          <h1>{pog.pog} pogs</h1>
+          <h1>${pog.price}</h1>
+        </p>
 
-				<Button onClick={handleClose}>Submit</Button>
-			</Container>
-		</ModalContainer>
-	);
+        {/* <img src={payment} alt="" className="payment" /> */}
+
+        <Button onClick={handleClose}>Submit</Button>
+      </Container>
+    </ModalContainer>
+  );
 };
 
 export default PaymentModal;

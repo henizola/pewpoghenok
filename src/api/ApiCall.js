@@ -6,6 +6,7 @@ import { ENDPOINT } from "./Api";
 export const apiCall = (method, data, path, callback, onFailure, token) =>
   new Promise((resolve, reject) => {
     console.log("this is request", data, path);
+    console.log("token:", sessionStorage.getItem("token"));
     const config = {
       headers: {
         Authorization: `${token ? token : sessionStorage.getItem("token")}`,
@@ -37,7 +38,7 @@ export const apiCall2 = (method, data, path, callback, onFailure, token) =>
     axios({
       method: method,
       url: `${ENDPOINT}${path}`,
-      ...data,
+      data,
       headers: config.headers,
     })
       .then((res) => {

@@ -3,7 +3,7 @@ import { Container, InputContainer, Button, DispalyError } from "./SignIn";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { apiCall } from "../../api/ApiCall";
-const SignInForm = () => {
+const SignInForm = (props) => {
   const [user, setUser] = useState({});
   const [err, setErrors] = useState({});
   const handleChange = (e) => {
@@ -15,6 +15,7 @@ const SignInForm = () => {
 
     apiCall("post", user, `auth/login`, onSuccess, onFailure);
   };
+
   const onFailure = (error) => {
     console.log(error);
     if (
@@ -30,6 +31,10 @@ const SignInForm = () => {
   const onSuccess = (data) => {
     console.log(data);
     console.log("  successfully loggedin!");
+    sessionStorage.setItem("uid", data["_id"]);
+    sessionStorage.setItem("token", data.tokens["access"]["token"]);
+    sessionStorage.setItem("refresh", data.tokens["refresh"]["token"]);
+    // props.history.push("/");
     // toast.success("Registerd  successfully !");
     // setTimeout(() => {
     //   navigate("/");
@@ -68,7 +73,13 @@ const SignInForm = () => {
             <DispalyError>{err["password"]}</DispalyError>
           </InputContainer>
 
-          <p className="red" style={{ marginTop: "10px", cursor: "pointer" }}>
+          <p
+            className="red"
+            style={{ marginTop: "10px", cursor: "pointer" }}
+            onClick={(e) => {
+              props.history.push("/forget-password");
+            }}
+          >
             Forgot password
           </p>
         </div>

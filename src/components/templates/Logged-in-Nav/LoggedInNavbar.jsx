@@ -1,14 +1,13 @@
 import { InputBase } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React, { useState } from "react";
-import { BiSearchAlt2 } from "react-icons/bi";
-import { BsFillGearFill, BsFillPersonPlusFill } from "react-icons/bs";
+import { BiSearchAlt2, BiLogOut } from "react-icons/bi";
+import { BsFillGearFill } from "react-icons/bs";
 import { FaCoins } from "react-icons/fa";
-import { MdGroups } from "react-icons/md";
 import { Link } from "react-router-dom";
+import TeamModalOne from "../../../components/TeamModal/TeamModalOne.component";
 import AddMembers from "../../AddMembers/AddMembers.component.jsx";
 import SoloModal from "../../SoloModal/SoloModal.component.jsx";
-import TeamModalOne from "../../../components/TeamModal/TeamModalOne.component";
 import { Container } from "./LoggedInNavbar.styles.jsx";
 
 import avatar from "../../../assets/avatar1.png";
@@ -117,6 +116,16 @@ const LoggedInNav = (props) => {
 						>
 							<BsFillGearFill style={{ marginRight: "10px" }} /> Account
 							settings
+						</Link>
+						<Link
+							to='/sign-in'
+							onClick={() => {
+								sessionStorage.removeItem("uid");
+								sessionStorage.removeItem("token");
+								sessionStorage.removeItem("refresh");
+							}}
+						>
+							<BiLogOut style={{ marginRight: "10px" }} /> Logout
 						</Link>
 					</div>
 				)}

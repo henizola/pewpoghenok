@@ -1,6 +1,6 @@
 import { InputBase } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiSearchAlt2, BiLogOut } from "react-icons/bi";
 import { BsFillGearFill } from "react-icons/bs";
 import { FaCoins } from "react-icons/fa";
@@ -10,7 +10,10 @@ import AddMembers from "../../AddMembers/AddMembers.component.jsx";
 import SoloModal from "../../SoloModal/SoloModal.component.jsx";
 import { Container } from "./LoggedInNavbar.styles.jsx";
 
-import avatar from "../../../assets/avatar1.png";
+import placeHolder from "../../../assets/1.png";
+
+import { apiCall2 } from "../../../api/ApiCall";
+import { ImageENDPOINT } from "../../../api/Api";
 
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",
@@ -74,6 +77,26 @@ const LoggedInNav = (props) => {
 		setSolo(false);
 		setAddMembers(true);
 	};
+	const [user, setUser] = useState();
+
+	useEffect(() => {
+		getUser();
+		console.log("this is user", user);
+	}, []);
+
+	const getUser = () => {
+		apiCall2(
+			"get",
+			{},
+			`users/update`,
+			(data) => {
+				console.log(data);
+				setUser({ ...data });
+			},
+			(err) => {}
+		);
+	};
+	console.log("this is user", user);
 	return (
 		<Container>
 			<Link to='/'>
@@ -95,8 +118,8 @@ const LoggedInNav = (props) => {
 				<button className='red-link' onClick={openTeam}>
 					Team Match
 				</button>
-				<p className='info'>
-					<p>2,123 pogs</p>
+				<p className='info' style={{ width: "120%", marginLeft: "-10px" }}>
+					<p>{user && user.pogs} pogs</p>
 				</p>
 				{open && (
 					<div className='menu'>
@@ -131,7 +154,19 @@ const LoggedInNav = (props) => {
 				)}
 			</div>
 			<button className='person' onClick={() => setOpen(!open)}>
-				<img src={avatar} alt='avatar' />
+				{user && (
+					<img
+						src={
+							user["profile"]
+								? typeof user["profile"] == "string"
+									? ImageENDPOINT + "" + user["profile"]
+									: URL.createObjectURL(user["profile"])
+								: placeHolder
+						}
+						alt=''
+						className='profile-image'
+					/>
+				)}
 			</button>
 			<SoloModal open={solo} setOpen={openSolo} onClose={onClose} />
 			<TeamModalOne

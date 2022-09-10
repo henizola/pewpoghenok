@@ -15,7 +15,6 @@ const Routes = () => {
 	return (
 		<Switch>
 			<RouteWithLayout exact path='/' component={Home} layout={MinimalView} />
-			{/* {!sessionStorage.getItem("token") && <Redirect to='/sign-in' />} */}
 			<RouteWithLayout
 				exact
 				path='/sign-up'

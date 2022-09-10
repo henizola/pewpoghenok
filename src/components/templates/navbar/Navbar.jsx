@@ -1,8 +1,10 @@
 import { InputBase } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React from "react";
+import { useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { apiCall2 } from "../../../api/ApiCall";
 
 import { Container } from "./NavbarStyle";
 

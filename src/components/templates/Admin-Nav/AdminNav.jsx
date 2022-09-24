@@ -1,19 +1,19 @@
 import { InputBase } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React, { useEffect, useState } from "react";
-import { BiLogOut, BiSearchAlt2 } from "react-icons/bi";
+import { BiSearchAlt2, BiLogOut } from "react-icons/bi";
 import { BsFillGearFill } from "react-icons/bs";
 import { FaCoins } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import TeamModalOne from "../../TeamModal/TeamModalOne.component";
 import AddMembers from "../../AddMembers/AddMembers.component.jsx";
 import SoloModal from "../../SoloModal/SoloModal.component.jsx";
-import { Container } from "./LoggedInNavbar.styles.jsx";
+import { Container } from "./AdminNav.styles.jsx";
 
 import placeHolder from "../../../assets/1.png";
 
-import { ImageENDPOINT } from "../../../api/Api";
 import { apiCall2 } from "../../../api/ApiCall";
-import RecomendModal from "../../RecomendModal/RecomendModal.component.jsx";
+import { ImageENDPOINT } from "../../../api/Api";
 
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",
@@ -47,18 +47,36 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
-const LoggedInNav = (props) => {
+const AdminNav = (props) => {
 	const [open, setOpen] = useState(false);
-	const [recomend, setRecomend] = useState(false);
-
-	const openRecomend = () => {
-		setRecomend(true);
+	const [solo, setSolo] = useState(false);
+	const [team, setTeam] = useState(false);
+	const [addMembers, setAddMembers] = useState(false);
+	const openSolo = () => {
+		setSolo(true);
+		setTeam(false);
+		setAddMembers(false);
 	};
-
+	const openMembers = () => {
+		setSolo(false);
+		setTeam(false);
+		setAddMembers(true);
+	};
+	const openTeam = () => {
+		setTeam(true);
+		setSolo(false);
+		setAddMembers(false);
+	};
 	const onClose = () => {
-		setRecomend(false);
+		setTeam(false);
+		setSolo(false);
+		setAddMembers(false);
 	};
-
+	const onNext = () => {
+		setTeam(false);
+		setSolo(false);
+		setAddMembers(true);
+	};
 	const [user, setUser] = useState();
 
 	useEffect(() => {
@@ -94,10 +112,12 @@ const LoggedInNav = (props) => {
 				/>
 			</Search>
 			<div className='right'>
-				<button className='red-link' onClick={openRecomend}>
-					Recommend a Game
+				<button className='red-link' onClick={openSolo}>
+					Solo Match
 				</button>
-
+				<button className='red-link' onClick={openTeam}>
+					Team Match
+				</button>
 				<p className='info' style={{ width: "120%", marginLeft: "-10px" }}>
 					<p>{user && user.pogs} pogs</p>
 				</p>
@@ -148,8 +168,15 @@ const LoggedInNav = (props) => {
 					/>
 				)}
 			</button>
-			<RecomendModal open={recomend} setOpen={openRecomend} onClose={onClose} />
+			<SoloModal open={solo} setOpen={openSolo} onClose={onClose} />
+			<TeamModalOne
+				open={team}
+				setOpen={openTeam}
+				onClose={onClose}
+				onNext={onNext}
+			/>
+			<AddMembers open={addMembers} setOpen={openMembers} onClose={onClose} />
 		</Container>
 	);
 };
-export default LoggedInNav;
+export default AdminNav;

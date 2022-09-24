@@ -48,7 +48,7 @@ export const Container = styled.div`
 	}
 	.right {
 		display: grid;
-		grid-template-columns: 200px 72px;
+		grid-template-columns: 130px 144px 72px;
 		grid-gap: 22px;
 		margin-left: 47px;
 		position: relative;

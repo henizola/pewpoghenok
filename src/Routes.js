@@ -12,53 +12,60 @@ import SignUp from "./views/SignUp/SignUp";
 import MatchPage from "./views/match-page/match";
 import ForgetPassword from "./views/forgetpassword/forget-password";
 import PasswordChange from "./views/password-change/password-chnage";
+import AdminSettings from "./views/AdminSettings/AdminSettings.page";
 const Routes = () => {
-  return (
-    <Switch>
-      <RouteWithLayout exact path="/" component={Home} layout={MinimalView} />
-      <RouteWithLayout
-        exact
-        path="/sign-up"
-        component={SignUp}
-        layout={MainView}
-      />
-      <RouteWithLayout
-        exact
-        path="/sign-in"
-        component={SignIn}
-        layout={MainView}
-      />
-      <RouteWithLayout
-        exact
-        path="/forget-password"
-        component={ForgetPassword}
-        layout={MainView}
-      />
-      <RouteWithLayout
-        exact
-        path="/passwor-reset/:token"
-        component={PasswordChange}
-        layout={MainView}
-      />
-      <RouteWithLayout
-        exact
-        path="/setting"
-        component={Settings}
-        layout={MinimalView}
-      />
-      <RouteWithLayout
-        exact
-        path="/currency-store"
-        component={Currency}
-        layout={MinimalView}
-      />
-      <RouteWithLayout
-        exact
-        path="/match"
-        component={MatchPage}
-        layout={MinimalView}
-      />
-    </Switch>
-  );
+	return (
+		<Switch>
+			<RouteWithLayout exact path='/' component={Home} layout={MinimalView} />
+			<RouteWithLayout
+				exact
+				path='/sign-up'
+				component={SignUp}
+				layout={MainView}
+			/>
+			<RouteWithLayout
+				exact
+				path='/admin'
+				component={AdminSettings}
+				layout={MinimalView}
+			/>
+			<RouteWithLayout
+				exact
+				path='/sign-in'
+				component={SignIn}
+				layout={MainView}
+			/>
+			<RouteWithLayout
+				exact
+				path='/forget-password'
+				component={ForgetPassword}
+				layout={MainView}
+			/>
+			<RouteWithLayout
+				exact
+				path='/passwor-reset/:token'
+				component={PasswordChange}
+				layout={MainView}
+			/>
+			<RouteWithLayout
+				exact
+				path='/setting'
+				component={Settings}
+				layout={MinimalView}
+			/>
+			<RouteWithLayout
+				exact
+				path='/currency-store'
+				component={Currency}
+				layout={MinimalView}
+			/>
+			<RouteWithLayout
+				exact
+				path='/match'
+				component={MatchPage}
+				layout={MinimalView}
+			/>
+		</Switch>
+	);
 };
 export default Routes;

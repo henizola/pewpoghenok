@@ -89,7 +89,7 @@ const General = () => {
     formData.append("DoB", user["DoB"]);
     formData.append("username", user["username"]);
     formData.append("email", user["email"]);
-    formData.append("password", user["password"]);
+    user["password"] && formData.append("password", user["password"]);
     formData.append("_id", user["_id"]);
     apiCall2("post", formData, `users/update`, onSuccess, onFailure);
   };
@@ -106,6 +106,7 @@ const General = () => {
   };
   const onSuccess = (data) => {
     console.log(data);
+    delete data["password"];
     setUser({ ...data });
     console.log("Registerd  successfully !");
     onClose();
@@ -122,7 +123,6 @@ const General = () => {
         onClose={onClose}
         onSelect={(e) => {
           e.preventDefault();
-
           setUser({ ...user, profile: e.target.files[0] });
         }}
         handleSubmmit={handelSubmmit}

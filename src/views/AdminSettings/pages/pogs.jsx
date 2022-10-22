@@ -1,7 +1,19 @@
-import { Button } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { apiFetch } from "../../../api/ApiCall";
 import { CustomeTable } from "./match-history-style";
 const Pogs = () => {
+	const [games, setGames] = useState([]);
+
+	useEffect(() => {
+		apiFetch("get", "game", onSuccess, onFailure);
+	}, []);
+
+	const onSuccess = (resp) => {
+		setGames(resp);
+	};
+	const onFailure = (error) => {
+		console.log("this failed", error);
+	};
 	return (
 		<>
 			<CustomeTable>
@@ -13,22 +25,12 @@ const Pogs = () => {
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td data-label='user'>Game 1</td>
-						<td data-label='date'>200 of 500</td>
-					</tr>
-					<tr>
-						<td data-label='user'>Game 2</td>
-						<td data-label='date'>100 of 300</td>
-					</tr>
-					<tr>
-						<td data-label='user'>Game 3</td>
-						<td data-label='date'>400 of 1000</td>
-					</tr>
-					<tr>
-						<td data-label='user'>Game 4</td>
-						<td data-label='date'>200 of 200</td>
-					</tr>
+					{games.map((g) => (
+						<tr>
+							<th scope='col'>{g.matchName}</th>
+							<th scope='col'>{g.lootAmount}</th>
+						</tr>
+					))}
 				</tbody>
 			</CustomeTable>
 		</>

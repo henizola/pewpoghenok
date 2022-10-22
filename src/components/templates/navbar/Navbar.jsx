@@ -44,7 +44,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const Navbar = () => {
 	return (
 		<Container>
-			<Link to='/'>
+			<Link to='/home'>
 				<h1>PEWPOG</h1>
 			</Link>
 			<Search>
@@ -57,7 +57,7 @@ const Navbar = () => {
 				/>
 			</Search>
 			<div className='right'>
-				<Link to='/sign-in' className='outline-red'>
+				<Link to='/' className='outline-red'>
 					Log In
 				</Link>
 				<Link to='/sign-up' className='fill-red'>

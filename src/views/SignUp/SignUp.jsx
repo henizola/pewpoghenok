@@ -32,7 +32,7 @@ const SignUp = (props) => {
 
 	const onSuccess = (data) => {
 		console.log("Registerd  successfully !");
-		props.history.push("/sign-in");
+		props.history.push("/");
 
 		// toast.success("Registerd  successfully !");
 		// setTimeout(() => {

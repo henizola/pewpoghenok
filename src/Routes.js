@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Switch } from "react-router-dom";
+import { Redirect, Switch, useLocation } from "react-router-dom";
 import RouteWithLayout from "./components/routeWithLayout/RouteWithLayout";
 import MainView from "./layout/main/MainView"; //With navbar and footer
 import Home from "./views/Home/Home.page";
@@ -13,10 +13,25 @@ import MatchPage from "./views/match-page/match";
 import ForgetPassword from "./views/forgetpassword/forget-password";
 import PasswordChange from "./views/password-change/password-chnage";
 import AdminSettings from "./views/AdminSettings/AdminSettings.page";
+import { Navigate } from "react-router-dom";
 const Routes = () => {
+	const user = sessionStorage.getItem("user");
+	console.log(window.location.pathname, "puth");
+	if (
+		!user &&
+		(window.location.pathname !== "/" ||
+			window.location.pathname !== "/sign=up")
+	) {
+		// window.location.href = "/";
+	}
 	return (
 		<Switch>
-			<RouteWithLayout exact path='/' component={Home} layout={MinimalView} />
+			<RouteWithLayout
+				exact
+				path='/home'
+				component={Home}
+				layout={MinimalView}
+			/>
 			<RouteWithLayout
 				exact
 				path='/sign-up'
@@ -29,12 +44,7 @@ const Routes = () => {
 				component={AdminSettings}
 				layout={MinimalView}
 			/>
-			<RouteWithLayout
-				exact
-				path='/sign-in'
-				component={SignIn}
-				layout={MainView}
-			/>
+			<RouteWithLayout exact path='/' component={SignIn} layout={MainView} />
 			<RouteWithLayout
 				exact
 				path='/forget-password'

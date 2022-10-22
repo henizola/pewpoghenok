@@ -75,7 +75,7 @@ const MobileNav = (props) => {
 	};
 	return (
 		<Container style={{ display: (solo || team || addMembers) && "none" }}>
-			<Link to='/'>
+			<Link to='/home'>
 				<h1 className='logo'>PEWPOG</h1>
 			</Link>
 			<Search>

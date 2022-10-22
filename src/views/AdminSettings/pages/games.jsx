@@ -1,8 +1,20 @@
-import { Button } from "@mui/material";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { apiFetch } from "../../../api/ApiCall";
 import { CustomeTable } from "./match-history-style";
 const Games = () => {
+	const [games, setGames] = useState([]);
+
+	useEffect(() => {
+		apiFetch("get", "game", onSuccess, onFailure);
+	}, []);
+
+	const onSuccess = (resp) => {
+		setGames(resp);
+		console.log(resp);
+	};
+	const onFailure = (error) => {
+		console.log("this failed", error);
+	};
 	return (
 		<>
 			<CustomeTable>
@@ -12,52 +24,27 @@ const Games = () => {
 						<th scope='col'>Game Name</th>
 						<th scope='col'>Type</th>
 						<th scope='col'>Number of players</th>
-						<th scope='col'>Total pogs</th>
+						<th scope='col'>Game</th>
 						<th scope='col'>Date</th>
-						<th scope='col'>Time</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td data-label='user'>Game 1</td>
-						<td data-label='date'>Team</td>
-						<td data-label='Game'>4 / 6</td>
-						<td data-label='Payout'>1000</td>
-						<td data-label='Date'>12-12-2022</td>
-						<td data-label='Date' style={{ display: "flex" }}>
-							3:00 PM
-						</td>
-					</tr>
-					<tr>
-						<td data-label='user'>Game 2</td>
-						<td data-label='date'>Solo</td>
-						<td data-label='Game'>2 / 3</td>
-						<td data-label='Payout'>1000</td>
-						<td data-label='Date'>12-12-2022</td>
-						<td data-label='Date' style={{ display: "flex" }}>
-							3:00 PM
-						</td>
-					</tr>
-					<tr>
-						<td data-label='user'>Game 3</td>
-						<td data-label='date'>Team</td>
-						<td data-label='Game'>2 / 6</td>
-						<td data-label='Payout'>2000</td>
-						<td data-label='Date'>12-12-2022</td>
-						<td data-label='Date' style={{ display: "flex" }}>
-							3:00 PM
-						</td>
-					</tr>
-					<tr>
-						<td data-label='user'>Game 1</td>
-						<td data-label='date'>Team</td>
-						<td data-label='Game'>4 / 5</td>
-						<td data-label='Payout'>1000</td>
-						<td data-label='Date'>12-12-2022</td>
-						<td data-label='Date' style={{ display: "flex" }}>
-							3:00 PM
-						</td>
-					</tr>
+					{games.map((g) => (
+						<tr>
+							<td data-label='user'>{g.matchName}</td>
+							<td data-label='date'>{g.gameType}</td>
+							<td data-label='Game'>
+								{" "}
+								{g.team[0].players.length + g.team[1].players.length} /{" "}
+								{g.maxPlayers}
+							</td>
+							<td data-label='Payout'>{g.game}</td>
+							<td data-label='Date'>
+								{g.matchDate.substring(8, 10)}.{g.matchDate.substring(5, 7)}.
+								{g.matchDate.substring(0, 4)}
+							</td>
+						</tr>
+					))}
 				</tbody>
 			</CustomeTable>
 		</>

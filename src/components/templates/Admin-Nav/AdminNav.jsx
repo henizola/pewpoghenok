@@ -99,7 +99,7 @@ const AdminNav = (props) => {
 	console.log("this is user", user);
 	return (
 		<Container>
-			<Link to='/'>
+			<Link to='/admin'>
 				<h1>PEWPOG</h1>
 			</Link>
 			<Search>
@@ -141,11 +141,9 @@ const AdminNav = (props) => {
 							settings
 						</Link>
 						<Link
-							to='/sign-in'
+							to='/'
 							onClick={() => {
-								sessionStorage.removeItem("uid");
-								sessionStorage.removeItem("token");
-								sessionStorage.removeItem("refresh");
+								sessionStorage.clear();
 							}}
 						>
 							<BiLogOut style={{ marginRight: "10px" }} /> Logout

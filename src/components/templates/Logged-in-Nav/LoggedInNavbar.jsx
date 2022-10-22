@@ -81,7 +81,7 @@ const LoggedInNav = (props) => {
 	console.log("this is user", user);
 	return (
 		<Container>
-			<Link to='/'>
+			<Link to='/home'>
 				<h1>PEWPOG</h1>
 			</Link>
 			<Search>
@@ -121,7 +121,7 @@ const LoggedInNav = (props) => {
 							settings
 						</Link>
 						<Link
-							to='/sign-in'
+							to='/'
 							onClick={() => {
 								sessionStorage.removeItem("uid");
 								sessionStorage.removeItem("token");

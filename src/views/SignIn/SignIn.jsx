@@ -4,8 +4,12 @@ import SignInForm from "../../components/SignIn/SignIn.component";
 import { Container } from "./SignIn.styles";
 
 const SignIn = (props) => {
-	const sucess = () => {
-		props.history.push("/");
+	const sucess = (data) => {
+		if (data.role === "Admin") {
+			props.history.push("/admin");
+		} else {
+			props.history.push("/home");
+		}
 	};
 	return (
 		<Container>

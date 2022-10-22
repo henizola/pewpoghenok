@@ -21,10 +21,13 @@ const SignInForm = ({ sucess }) => {
 	};
 
 	const onSuccess = (data) => {
-		sucess();
+		console.log(data, "this is data");
+
 		sessionStorage.setItem("uid", data["_id"]);
+		sessionStorage.setItem("user", data);
 		sessionStorage.setItem("token", data.tokens["access"]["token"]);
 		sessionStorage.setItem("refresh", data.tokens["refresh"]["token"]);
+		sucess(data);
 	};
 	return (
 		<Container>

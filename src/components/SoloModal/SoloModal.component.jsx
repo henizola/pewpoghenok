@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
+import { apiCall } from "../../api/ApiCall";
 import { Button, Container, InputContainer } from "./SoloModal.styles";
 
 const style = {
@@ -52,16 +53,51 @@ const SoloModal = ({ open, setOpen, onClose, handleClose }) => {
 			setWarning(true);
 		} else {
 			setWarning(false);
-			setDate("");
-			setDetail("");
-			setLoot("");
-			setName("");
-			setTag("");
-			setGame("");
-			onClose();
+			apiCall(
+				"post",
+				{
+					matchName: name,
+					game: game,
+					matchDate: date,
+					lootAmount: loot,
+					pledge: 100,
+					matchDetails: detail,
+					gameType: "public",
+					gamekind: "solo",
+					team: [
+						{
+							teamName: "test",
+							players: [],
+						},
+						{
+							teamName: "test",
+							players: [],
+						},
+					],
+					maxPlayers: 2,
+				},
+				`game/create`,
+				onSuccess,
+				onFailure
+			);
 		}
 	};
 
+	const onSuccess = (data) => {
+		console.log("this is the data", data);
+		setDate("");
+		setDetail("");
+		setLoot("");
+		setName("");
+		setTag("");
+		setGame("");
+		onClose();
+		onClose();
+	};
+
+	const onFailure = (error) => {
+		console.log("eror", error);
+	};
 	const [info, setInfo] = useState(false);
 	const [tagInfo, setTagInfo] = useState(false);
 	return (
@@ -95,7 +131,7 @@ const SoloModal = ({ open, setOpen, onClose, handleClose }) => {
 						<select className='input' onChange={(e) => setGame(e.target.value)}>
 							<option selected='true' value='' disabled='disabled'></option>
 							<option>Valorant</option>
-							<option>League of Lefends</option>
+							<option>League of Legends</option>
 							<option>Team Fight Tactics</option>
 							<option>Legends of Runeterra</option>
 						</select>

@@ -71,16 +71,51 @@ const TeamModal1 = ({ open, setOpen, onClose }) => {
 			setWarning(true);
 		} else {
 			setWarning(false);
-			setDate("");
-			setDetail("");
-			setLoot("");
-			setName("");
-			setTag("");
-			setGame("");
-			onClose();
+			apiCall(
+				"post",
+				{
+					matchName: name,
+					game: game,
+					matchDate: date,
+					lootAmount: loot,
+					pledge: 100,
+					matchDetails: detail,
+					gameType: "public",
+					gamekind: "team",
+					team: [
+						{
+							teamName: "test",
+							players: [],
+						},
+						{
+							teamName: "test",
+							players: [],
+						},
+					],
+					maxPlayers: 2,
+				},
+				`game/create`,
+				onSuccess,
+				onFailure
+			);
 		}
 	};
 
+	const onSuccess = (data) => {
+		console.log("this is the data", data);
+		setDate("");
+		setDetail("");
+		setLoot("");
+		setName("");
+		setTag("");
+		setGame("");
+		onClose();
+		onClose();
+	};
+
+	const onFailure = (error) => {
+		console.log("eror", error);
+	};
 	const [info, setInfo] = useState(false);
 	const [tagInfo, setTagInfo] = useState(false);
 	return (
@@ -123,7 +158,7 @@ const TeamModal1 = ({ open, setOpen, onClose }) => {
 								>
 									<option selected='true' value='' disabled='disabled'></option>
 									<option>Valorant</option>
-									<option>League of Lefends</option>
+									<option>League of Legends</option>
 									<option>Team Fight Tactics</option>
 									<option>Legends of Runeterra</option>
 								</select>
